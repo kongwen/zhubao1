@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>bootstrap练习</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            -ms-touch-action: none;
+        }
+
+        body {
+            /*overflow: hidden;  this is important to prevent the whole page to bounce */
+        }
+     /*   #wrapper {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ccc;
+            overflow: hidden;
+           *//* display: none;*//*
+        }*/
+       #nav,#smallMuse{
+           background: #2f2f2f;
+           overflow: hidden;
+        }
+        #top .row,#nav .row,#smallMuse .row{
+            width: 98%;
+            margin: 0 auto;
+        }
+        #smallMuse{
+            display: block;
+        }
+        #top,#nav{
+            display: none;
+        }
+        .pagination > li > a, .pagination > li > span{
+            background: #d0d1d5;
+        }
+        @media (min-width: 992px) {
+            #smallMuse{
+                display: none;
+            }
+            #top,#nav{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<!--<body onload="loaded()">-->
+<body >
+    <div id="wrapper">
+        <div id="pageOut">
+
+            <div id="top" >
+                <div class="row">
+                    <ul class="nav nav-pills nav-justified navbar-left">
+                        <li><a href="portfolio.html">portfolioportfolioportfolioportfolioportfolio</a></li>
+                        <li class="page-scroll"><a href="#about">About</a></li>
+                        <li class="page-scroll"><a href="blog.html">blog</a></li>
+                        <li class="page-scroll"><a href="#contact">get in touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="nav" >
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <ul class="nav nav-pills nav-justified navbar-left">
+                            <li><a href="portfolio.html">portfolio</a></li>
+                            <li class="page-scroll"><a href="#about">About</a></li>
+                            <li class="page-scroll"><a href="blog.html">blog</a></li>
+                            <li class="page-scroll"><a href="#contact">get in touch</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12  col-md-6">
+                        <ul class="nav nav-pills nav-justified  navbar-right">
+                            <li><a href="portfolio.html">portfolio</a></li>
+                            <li class="page-scroll"><a href="#about">About</a></li>
+                            <li class="page-scroll"><a href="blog.html">blog</a></li>
+                            <li class="page-scroll"><a href="#contact">get in touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="smallMuse">
+                <div class="row">
+                        <div  style="padding:10px;text-align:right;width: 98%;">
+                          <a class="glyphicon glyphicon-user"  style="margin-right:10px;color: #fff;" id="userHandle"></a>
+                          <a class="glyphicon glyphicon-align-justify" style="margin-right:10px;color: #fff;" id="pull"></a>
+                        </div>
+
+                </div>
+            </div>
+            <div id="pages">
+                 <div class="container">
+                    <div class="row">
+                        <div id="sss" style="width: 60px;height: 100px;"><br/>ssssss1111</div>
+                        <div style="width: 60px;height: 100px;"><button class="btn btn-primary" id="backPage">返回</button></div>
+                        <div style="width: 60px;height: 100px;">
+                            <button class="btn btn-primary sendModal"> 确认弹窗</button>
+                        </div>
+                        <div style="width: 60px;height: 100px;">
+                                <a href="list.html">产品部</a>
+                        </div>
+                        <div style="width: 60px;height: 100px;">
+                            <a type="button"  class="btn btn-default">
+                                加载更多
+                            </a>
+                        </div>
+                        <div style="width: 60px;height: 100px;">1111</div>
+
+                        <div style="width: 60px;height: 100px;">1111</div>
+                        <div style="width: 60px;height: 100px;">1111</div>
+                        <div style="width: 60px;height: 100px;">1111</div>
+                        <div style="width: 60px;height: 100px;">1111</div>
+                    </div>
+                     <nav>
+                         <ul class="pagination">
+                             <li>
+                                 <a href="#"  aria-label="Previous">
+                                     <span aria-hidden="true">&laquo;</span>
+                                 </a>
+                             </li>
+                             <li><a href="#">1</a></li>
+                             <li><a href="#">2</a></li>
+                             <li><a href="#">3</a></li>
+                             <li><a href="#">4</a></li>
+                             <li><a href="#">5</a></li>
+                             <li>
+                                 <a href="#" aria-label="Next">
+                                     <span aria-hidden="true">&raquo;</span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </nav>
+                     <button type="button" id="myButton" class="btn btn-primary">
+                         Loading state
+                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="nav navbar-fixed-bottom" style="width: 20px;right:1em;bottom:5px;left: inherit;text-align: center;border: 1px solid #d0d1d5;color: #2365cc; ">
+        <span class="glyphicon glyphicon-arrow-up" id="reTop"></span>
+    </nav>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.events.mini.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+  <!--  <script type="text/javascript" src="js/iscroll.js"></script>-->
+
+    <script type="text/javascript">
+        /*滚动条*/
+      /*  var myScroll;
+        function loaded () {
+            myScroll = new IScroll('#wrapper', { mouseWheel: true });
+        }*/
+        /*菜单栏*/
+        $(function() {
+            var $pull = $('#pull'),
+            $userHandle = $('#userHandle'),
+            $menu = $('#nav'),$top = $('#top');
+            $pull.on('tap', function(e) {
+                e.preventDefault();
+                $menu.slideToggle();
+                $top.slideUp();
+            });
+            $userHandle.on('tap', function(e) {
+                e.preventDefault();
+                $top.slideToggle();
+                $menu.slideUp();
+            });
+            $('#backPage').tap(function(){
+                window.history.go(-1);
+            });
+            $('.sendModal').tap(function(){
+                $('#myModal').modal('show')
+            });
+
+        });
+      document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    </script>
+</body>
+</html>
