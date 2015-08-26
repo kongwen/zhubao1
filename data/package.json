@@ -1,0 +1,6 @@
+var pageData={
+    "list": {
+        "data": "Users",
+        "serverUrl": ["/ced/pad/findUsersData.do","./data/product.json"]
+    }
+}
