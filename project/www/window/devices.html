@@ -1,0 +1,82 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeDevice" class="notice"></div>
+
+    <script>
+        getMessage("Device", '/js/chart/data/message.json');
+    </script>
+
+    <div id="header" data-role="header" data-id="header" data-position="top" data-fullscreen="true"
+         data-tap-toggle="false">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>Device Ranking <b></b></span></div>
+        </div>
+    </div>
+    <!-- /header -->
+</div>
+<div class="content">
+    <div class="chart">
+        <div class="deviceLeft">
+            <h1 class="deviceTitle">Device Types</h1>
+            <canvas id="canvasTrafficTrend" width="1024px" height="570" rel="allUser" style="margin-top:5em;margin-left:0em"></canvas>
+        </div>
+
+            <div class="deviceList">
+                <h1 class="deviceTitle">Most Complaints</h1>
+                <div id="data1">
+                    <div id="Complaints" class="deviceContent"  style="height:80em">></div>
+                </div>
+            </div>
+
+            <div class="deviceList  clearRight" >
+                <h1 class="deviceTitle">Most Popular</h1>
+                <div id="data2">
+                    <div id="poplur" class="deviceContent"></div>
+                </div>
+            </div>
+
+            <div class="deviceList">
+                <h1 class="deviceTitle">Fastest Growing&nbsp;&nbsp;<em>compare with last week</em></h1>
+                <div id="data3">
+                    <div id="Fastest" class="deviceContent"></div>
+                </div>
+            </div>
+
+            <div class="deviceList">
+                <h1 class="deviceTitle">LTE</h1>
+                <div id="data4">
+                    <div id="LTE" class="deviceContent"></div>
+                </div>
+            </div>
+
+    </div>
+</div>
+<div class="page"></div>
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/canvas.Device.js"></script>
+<script>
+    function addScroll(id){
+        var len = $(id).find('dl').length,height = len*8+"em";
+        $(id).children("div").css({height:height});
+        return new IScroll(id);
+    }
+
+    $.page({datas: [
+        {name:'devices',url: '', Str: "<div id='DeviceMin'></div>"}
+    ]});
+	function drawSubMin(){
+    getDataThen(getUrl('devices'), function (data) {
+            drawDevice(options, "canvasTrafficTrend", data);
+             setTimeout(function(){
+                addScroll('#data1');
+                addScroll('#data2');
+                addScroll('#data3');
+                addScroll('#data4');
+            },500)
+    }, 'Device');
+		}
+	drawSubMin();
+</script>

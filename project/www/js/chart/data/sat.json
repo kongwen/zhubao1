@@ -1,0 +1,48 @@
+var REPORTJSON = {
+	"totalUsers":10584604,
+	"totalVips":985,
+	"totalAreas":10,
+	"totalUsersRate":"78%",
+	"totalVipsRate":"85%",
+	"totalAreasRate":"50%",
+	"chartThresholds":{
+			"allUserThresholds":[60,80],
+			"vipThresholds":[60,80],
+			"areaThresholds":[60,80]
+	},
+	"allUser":{
+				"leftY":"100%",
+				"rightY":0,
+				"bottomX":["01-08-2014","01-09-2014","01-10-2014","01-11-2014","01-12-2014","01-13-2014","01-14-2014"],
+				"number":{
+							"allService":[79,78,77,78,77,78,78],
+							"voice":[82,82,81,81,80,81,81],
+							"data":[75,74,73,73,73,74,74]
+						}
+			},
+	"vip":{
+			"leftY":"100%",
+			"rightY":0,
+			"bottomX":["01-08-2014","01-09-2014","01-10-2014","01-11-2014","01-12-2014","01-13-2014","01-14-2014"],
+			"number":{
+							"allService":[84,85,82,86,84,84,85],
+							"voice":[86,85,83,85,86,95,85],
+							"data":[80,81,79,81,83,82,80]
+					 }
+		},
+	"keyArea":{
+			"area":{
+				"leftY":"100%",
+				"rightY":0,
+				"bottomX":["01-08-2014","01-09-2014","01-10-2014","01-11-2014","01-12-2014","01-13-2014","01-14-2014"],
+				"number":{
+							"allService":[40,50,55,50,55,60,50],
+							"voice":[40,50,50,50,60,60,50],
+							"data":[40,50,60,50,50,60,50]
+				}	
+			},
+			"verySatisfied":["AIRPORT ADISUCIPTO","MALL AMBARUKMO","YOGYAKARTA"],
+			"satisfied":["TERBAN","KLITREN"],
+			"dissatisfied":["PARANGTRITIS ROAD","PAKEM","KALASAN","GAJAHMADA","TIMOHO"]
+	}
+}

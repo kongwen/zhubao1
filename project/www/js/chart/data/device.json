@@ -1,0 +1,302 @@
+var REPORTJSON = {
+    "feature": [
+        {
+            "name": "Smartphone",
+            "rate": "28%",
+            "totalNumber": 2982185
+        },
+        {
+            "name": "Featurephone",
+            "rate": "32%",
+            "totalNumber": 3422175
+        },
+        {
+            "name": "Datacard",
+            "rate": "2%",
+            "totalNumber": 223583
+        },
+        {
+            "name": "Others",
+            "rate": "37%",
+            "totalNumber": 3950744
+        }
+    ],
+    "complaints": [   
+        {
+            "name": "CSL BLUEBERRY I6100",
+            "rate": "68:10000",
+            "totalNumber": 658
+        },
+        {
+            "name": "PT SUPERTONE SPC BOSS&MINI",
+            "rate": "26:10000",
+            "totalNumber": 642
+        },
+        {
+            "name": "BLACKBERRY STORM2 9550",
+            "rate": "22:10000",
+            "totalNumber": 1510
+        },
+	{
+            "name": "SONY ERICSSON E15I",
+            "rate": "16:10000",
+            "totalNumber": 583
+        },
+	{
+            "name": "TINNO E521",
+            "rate": "15:10000",
+            "totalNumber": 592
+        },
+	{
+            "name": "NEWPLAN CP21",
+            "rate": "14:10000",
+            "totalNumber": 856
+        },
+	{
+            "name": "NOKIA 6760 SLIDE",
+            "rate": "13:10000",
+            "totalNumber": 648
+        },
+	{
+            "name": "NEXIAN NX-G500",
+            "rate": "12:10000",
+            "totalNumber": 1007
+        },
+	{
+            "name": "NOKIA C6-00",
+            "rate": "11:10000",
+            "totalNumber": 708
+        },
+	{
+            "name": "HEDY M98",
+            "rate": "10:10000",
+            "totalNumber": 824
+        }
+    ],
+    "populars": [
+        {
+            "name": "BLACKBERRY CURVE 8520",
+            "totalNumber": 423201,
+            "rate": "4%"
+        },
+        {
+            "name": "NOKIA X2-01, X2-03",
+            "totalNumber": 183838,
+            "rate": "2%"
+        },
+	{
+            "name": "BLACKBERRY 9220",
+            "totalNumber": 172896,
+            "rate": "2%"
+        },
+	{
+            "name": "NOKIA C3-00",
+            "totalNumber": 157802,
+            "rate": "1%"
+        },
+	{
+            "name": "SAMSUNG GT-C3303I",
+            "totalNumber": 151241,
+            "rate": "1%"
+        },
+	{
+            "name": "BLACKBERRY BOLD 9780",
+            "totalNumber": 131697,
+            "rate": "1%"
+        },
+	{
+            "name": "BLACKBERRY 8520",
+            "totalNumber": 124687,
+            "rate": "1%"
+        },
+	{
+            "name": "BLACKBERRY CURVE 9300",
+            "totalNumber": 120900,
+            "rate": "1%"
+        },
+	{
+            "name": "BLACKBERRY TORCH 9800",
+            "totalNumber": 117830,
+            "rate": "1%"
+        },
+        {
+            "name": "BLACKBERRY BOLD 9700",
+            "totalNumber": 114547,
+            "rate": "1%"
+        }
+    ],
+    "growing": [
+        {
+            "deviceData": {
+                "name": "NOKIA 6020",
+                "totalNumber": 17543,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 2801,
+                "rate": "19%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "APPLE IPHONE 5",
+                "totalNumber": 57140,
+                "rate": "1%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 8804,
+                "rate": "18%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "BLACKBERRY 9860",
+                "totalNumber": 22349,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 3445,
+                "rate": "18%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "HUAWEI P6",
+                "totalNumber": 52227,
+                "rate": "1%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 8031,
+                "rate": "18%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "NOKIA 2626",
+                "totalNumber": 35851,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 5364,
+                "rate": "18%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "BLACKBERRY 9530",
+                "totalNumber": 25074,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 3750,
+                "rate": "18%"
+            }
+        },
+	{
+            "deviceData": {
+                "name": "NEC N940",
+                "totalNumber": 20896,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 2917,
+                "rate": "16%"
+            }
+        },
+        {
+            "deviceData": {
+                "name": "Q7 M5130  C201  C205  H95  C112",
+                "totalNumber": 23881,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 3223,
+                "rate": "16%"
+            }
+        },
+        {
+            "deviceData": {
+                "name": "NEXIAN NX G330",
+                "totalNumber": 18531,
+                "rate": "0%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 2472,
+                "rate": "15%"
+            }
+        },
+        {
+            "deviceData": {
+                "name": "BLACKBERRY STORM2 9550",
+                "totalNumber": 93326,
+                "rate": "1%"
+            },
+            "growData": {
+                "name": "",
+                "totalNumber": 11279,
+                "rate": "14%"
+            }
+        }
+    ],
+    "lte": [
+        {
+            "name": "APPLE IPHONE 5",
+            "totalNumber": 57140,
+            "rate": "1%"
+        },
+        {
+            "name": "BLACKBERRY PLAYBOOK",
+            "totalNumber": 8553,
+            "rate": "0%"
+        },
+	{
+            "name": "APPLE IPAD 3RD GENERATION",
+            "totalNumber": 3990,
+            "rate": "0%"
+        },
+	{
+            "name": "SONY LT25I",
+            "totalNumber": 1184,
+            "rate": "0%"
+        },
+	{
+            "name": "NOKIA 920",
+            "totalNumber": 1149,
+            "rate": "0%"
+        },
+	{
+            "name": "HTC PN07100",
+            "totalNumber": 1052,
+            "rate": "0%"
+        },
+	{
+            "name": "APPLE IPAD MINI",
+            "totalNumber": 847,
+            "rate": "0%"
+        },
+	{
+            "name": "SAMSUNG GT-N7105",
+            "totalNumber": 708,
+            "rate": "0%"
+        },
+	{
+            "name": "NOKIA 820",
+            "totalNumber": 677,
+            "rate": "0%"
+        },
+        {
+            "name": "SAMSUNG SHV-E160S",
+            "totalNumber": 638,
+            "rate": "0%"
+        }
+    ]
+}

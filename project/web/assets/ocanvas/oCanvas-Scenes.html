@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-scenes</title>
+</head>
+<body>
+<canvas id="canvas" height="200" width="400"></canvas>
+<br/>
+<canvas id="canvas2" height="200" width="400"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc"
+    });
+
+    var startGame = canvas.display.text({
+        x: 50,
+        y: 50,
+        origin: { x: "left", y: "top" },
+        align: "center",
+        font: "bold 30px sans-serif",
+        text: "Start Game!",
+        fill: "#000"
+    });
+
+    var instructions = startGame.clone({
+        y: 140,
+        text: "Instructions"
+    });
+
+    var menu = canvas.scenes.create("menu-in", function () {
+        this.add(startGame);
+    });
+    canvas.scenes.load("menu-in");
+
+    setTimeout(function(){
+        menu.add(instructions);
+    },1000)
+
+    var canvas2 = oCanvas.create({
+        canvas: "#canvas2",
+        background: "#ccc"
+    });
+
+    var startGame2 = canvas2.display.text({
+        x: 50,
+        y: 40,
+        origin: { x: "left", y: "top" },
+        align: "center",
+        font: "bold 30px sans-serif",
+        text: "Start Game!",
+        fill: "#000"
+    });
+    var instructions2 = startGame2.clone({
+        y: 90,
+        text: "Instructions"
+    });
+    var menu2 = canvas2.scenes.create("menu-in2", function () {
+        this.add(startGame2);
+        this.add(instructions2);
+    });
+    menu2.remove(instructions2);//删除场景
+    canvas2.scenes.load();
+
+    //menu2.unload();
+</script>
+</body>
+</html>

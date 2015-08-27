@@ -1,0 +1,330 @@
+.form
+{
+	width:auto;
+
+}
+.form tr
+{
+	
+}
+.form-pop
+{
+	/*padding:10px 20px 80px 30px;*/
+	padding: 13px 20px 80px 14px;
+}
+.dec
+{
+	font-size:11px;
+}
+.form .infoTxt
+{
+	font-size:11px;
+}
+.form .form-content2
+{
+	padding-left:15px;
+}
+.form .daySetting input
+{
+	margin-left:5px;
+}
+.form .daySetting .chkB
+{
+	margin:0px;
+}
+.form .info
+{
+	font-size:11px;
+	height:auto;
+	padding:3px 0;
+}
+.form .intr
+{
+	padding-left: 75px;
+}
+.form .errorInput
+{
+	border:1px solid #c43817;
+}
+.form .txt a
+{
+	color:#3877bc;
+	text-decoration:underline;
+}
+.form .errorInfo
+{
+	font-size:11px;
+	height:auto;
+	padding:3px 0;
+	color:#c43817;
+}
+.form td
+{
+	color: #000000;
+	padding: 7px 0;
+	vertical-align: middle;
+	text-align:left;
+	word-break:break-all;
+}
+.formsb td
+{
+	padding: 7px 0;
+}
+.form .txt
+{
+	
+padding-right:10px;
+padding-top: 6px;
+text-align: right;
+
+}
+.form .txt .color-rose
+{
+	color:red;
+}
+.form .color-r
+{
+	color:red;
+}
+.form .marginT
+{
+	margin-right:16px;
+}
+.form td .sec
+{
+	margin-left:40px;
+}
+.form .arr
+{
+	color: #C10404;
+}
+.input-form,.input-textarea,.input-code,.input-subject,.input-MMS,.input-send-msg,.input-textarea-send-msg,.input-dec-send-msg,.input-subject_1
+{
+	background: url("../images/bg-input-form.png") repeat-x scroll 0 0 #FFFFFF;
+	border: 1px solid #B5BDC8;
+	color: #7c7c7c;
+	height: 30px;
+	line-height: 26px;
+	padding: 0 3px; 
+	/* width: 355px; */
+	width: 422px;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.input-send-msg
+{
+	width:500px;
+}
+#css-fix-des-wrap{
+	width:427px !important;
+}
+.input-textarea-send-msg,.input-dec-send-msg
+{
+	width:500px;
+	width:490px\9;/* ie8 -*/
+	height:50px;
+	line-height:17px;
+}
+.input-dec-send-msg
+{
+	height:85px;
+	padding: 0px;
+}
+.select
+{
+	width:256px;
+	height:26px;
+}
+.file
+{
+	width:210px;
+}
+.input-textarea 
+{
+	height: 70px;
+}
+.input-code
+{
+	width:100px;
+}
+.input-subject
+{
+	width:577px;
+}
+.input-MMS
+{
+	width:316px;
+}
+.form td.errorC 
+{
+	padding-left: 7px;
+}
+.form td .ico-txt 
+{
+	margin-left: 3px;
+}
+.form td .radio-2 
+{
+	margin-left: 18px;
+}
+.form td.errorC .ico-txt 
+{
+	color: #CF6905;
+	font-size: 10px;
+	margin-left: 6px;
+}
+.form td.titleDiv 
+{
+	padding-bottom: 17px;
+padding-left: 33px;
+padding-top: 20px;
+}
+.form td.titleDiv div 
+{
+/* 	background: none repeat scroll 0 0 #EFF3F5; */
+	color: #3976BB;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 9px;
+}
+.form td.titleDiv div .ico-arrow-up 
+{
+	margin-left: 5px;
+}
+.form td.buttonTd
+{
+	padding-top: 20px;
+}
+/* .form td.buttonTd a span
+{
+	min-width:75px;
+	_width:75px;
+	text-align:center;
+} */
+.form td.buttonTd .cancel
+{
+	margin-left: 15px;
+}
+.form td.description 
+{
+	vertical-align: top;
+}
+/**/
+.form2
+{
+	
+}
+.form2 td
+{
+	padding-top:15px;
+	padding-left:10px;
+}
+.form2 .txtM
+{
+	margin-left:5px;
+}
+.form2 .secondRadio
+{
+	margin-left:15px;
+}
+.form2 .btn
+{
+	padding-top:25px;
+	padding-bottom:15px;
+}
+.form2 .txt
+{
+	vertical-align:top;
+	padding-top:21px;
+}
+.form3
+{
+	width:auto;
+}
+.form3 td
+{
+	padding-right:10px;
+	height:auto;
+}
+.form3 .line td
+{
+	border-bottom:1px dashed #C2D4E2;
+	padding-bottom:18px;
+}
+.form3 .txt
+{
+	text-align:right;
+}
+.addInput2
+{
+	width:396px;
+	height:25px;
+	background: url("../images/bg-input-form.png") repeat-x scroll 0 0 #FFFFFF;
+	border: 1px solid #B5BDC8;
+	color: #7c7c7c;
+	position:relative;
+}
+.addInput2 input
+{
+	width:355px;
+	background: url("../images/bg-input-form.png") repeat-x scroll 0 0 #FFFFFF;
+	height:24px;
+	line-height:24px;
+	color: #7c7c7c;
+	border:none;
+}
+.addInput2 .button-add
+{
+	position:absolute;
+	top:-1px;
+	right:-1px;
+}
+/**/
+.form3 .ver-t
+{
+	vertical-align:top;
+}
+.form3 .fset
+{
+	vertical-align:top;
+	padding-top:20px;
+}
+.form3 .textarea,.form3 .input-txt
+{
+	background: url("../images/bg-input-form.png") repeat-x scroll 0 0 #FFFFFF;
+	border: 1px solid #B5BDC8;
+	color: #7c7c7c;
+	height: 60px;
+	padding: 0 3px;
+	width: 550px;
+}
+.form3 .input-txt
+{
+	height:26px;
+	line-height:26px;
+	width:360px;
+}
+.form3 .txtM
+{
+	margin-left:5px;
+}
+.form3 .secondRadio
+{
+	margin-left:20px;
+}
+.form3 .btn-b
+{
+	padding: 27px 0 10px;
+}
+.input-subject_1
+{
+	width:405px;
+}
+.vms-ico-man{
+	width: 72px;
+	height: 72px;
+	background: url('../images_et/oneboxandlss/vms_ico.png') no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -27px;
+}

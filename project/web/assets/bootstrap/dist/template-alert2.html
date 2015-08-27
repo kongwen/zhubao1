@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap基础模板-插件</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="vendor/html5shiv.min.js"></script>
+    <script src="vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div  data-spy="affix" data-offset-top="100"   style="background: blueviolet;opacity: 1" >
+ 导航内容1
+</div>
+
+
+<button type="button" class="btn btn-default" data-toggle="button">反转状态</button>
+<br/><br/><br/>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary"><input type="checkbox">选项1</label>
+    <label class="btn btn-primary"><input type="checkbox">选项2</label>
+    <label class="btn btn-primary"><input type="checkbox">选项3</label>
+</div>
+<br/><br/><br/>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id=
+                "option1">男</label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id=
+                "option2">女</label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options" id=
+                "option3">未知</label>
+</div>
+<br/><br/><br/>
+<button type="button" id="btn1"
+        class="btn btn-default"
+        data-loadingtext="正在加载..." >获取内容</button>
+<br/><br/><br/>
+<!-- 默认显示折叠区域-->
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne1">触发元素#1</a>
+            </h4>
+        </div>
+        <div id="collapseOne1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                折叠内容...
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseOne2">触发元素#1</a>
+            </h4>
+        </div>
+        <div id="collapseOne2" class="panel-collapse collapse">
+            <div class="panel-body">
+                折叠内容...
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse"  class="collapsed" data-parent="#accordion" href="#collapseOne">触发元素#1</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+                折叠内容...
+            </div>
+        </div>
+    </div>
+    <!-- 其他两个pannel格式和上边的一样 -->
+</div>
+<div data-spy="affix" data-offset-top="60" data-offset-bottom="100" style="background:#ffff00;opacity: 1" >导航内容</div>
+<!-- 默认显示折叠区域-->
+<button class="btn btn-danger" data-toggle="collapse" data-target="#demo55">触发按钮</button>
+<div id="demo55" class="collapse in width" >
+    折叠区域...折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域<br/>
+    折叠区域...折叠区域折叠区域折叠区域折叠区域
+    折叠区域...折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域<br/>
+    折叠区域...折叠区域折叠区域折叠区域折叠区域
+    折叠区域...折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域<br/>
+    折叠区域...折叠区域折叠区域折叠区域折叠区域
+    折叠区域...折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域<br/>
+    折叠区域...折叠区域折叠区域折叠区域折叠区域
+    折叠区域...折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域折叠区域<br/>
+    折叠区域...折叠区域折叠区域折叠区域折叠区域
+</div>
+    <div  data-spy="affix"  data-offset-bottom="10"  style="background: red;opacity: 1" >
+        导航内容2
+    </div>
+<br/><br/><br/>
+<div  class="carousel slide" id="carousel-container" style="height: 200px;">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-container" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-container" data-slide-to="1"></li>
+        <li data-target="#carousel-container" data-slide-to="2"></li>
+    </ol>
+    <!-- 图片容器 -->
+    <div class="carousel-inner" >
+        <div class="item active"><img alt="第一张图" src="../../static/img/tu1/21.jpg" /></div>
+        <div class="item"><img alt="第二张图" src="../../static/img/tu1/33.jpg" /> </div>
+        <div class="item"><img alt="第三张图" src="../../static/img/tu1/22.jpg" /> </div>
+    </div>
+
+    <!-- 左右控制按钮 -->
+    <a data-slide="prev" href="#carousel-container" class="left carousel-control">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a data-slide="next" href="#carousel-container" class="right carousel-control">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<br/><br/><br/><br/><br/><br/>
+
+
+<!--<div data-spy="affix" data-offset-top="60" data-offset-bottom="100" >导航内容3</div>-->
+<footer class="bs-footer" style="height: 600px;background: #0f0f0f;"></footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script>
+    $(function () {
+        $('#btn1').click(function () {
+            var btn = $(this);
+            btn.button('loading')
+            setTimeout(function () {
+                btn.button('reset'); // 重置按钮状态， 文本也会被恢复原状
+            }, 1000);
+        });
+    });
+   $('#carousel-container').carousel();
+   var data = $('#carousel-container').data('bs.carousel');
+    console.log(data);
+ /*  if (data instanceof Carousel) { // 确保是轮播插件的实例
+        data.carousel(0);
+        data.carousel('next');
+    }*/
+    $('#carousel-container').on('slide.bs.carousel', function (relatedTarget,direction){
+        console.log($(relatedTarget.relatedTarget).html());
+        console.log(direction);
+    })
+   /* $('#myAffix').affix({
+        offset: {
+            top: 100,
+            bottom: function () {
+                return (this.bottom = $('.bs-footer').outerHeight(true))
+            }
+        }
+    })*/
+</script>
+</body>
+</html>

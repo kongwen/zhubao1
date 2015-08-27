@@ -1,0 +1,16 @@
+
+	<div rel="traffic.html"  type="traffic2">
+    <h1>TRAFFIC</h1>
+
+        <div class="indexTraffic">
+            <span> Mobile broadband traffic distribution</span>
+            <canvas style='margin:0' id="indexTraffic" width="600px" height="200px"></canvas>
+
+			<script>
+				var Triffic = HOMEDATA["home1To7"]["traffic"];
+				if(Triffic){
+					indexDrawTraffic(Triffic, "indexTraffic");
+				}
+			</script>
+    </div>
+	</div>

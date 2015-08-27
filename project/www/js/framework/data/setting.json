@@ -1,0 +1,503 @@
+{
+    "index": {
+        "name": "Home",
+        "child": {
+            "index": {
+                "child": [],
+                "state": 1
+            },
+            "users": {
+                "child": [
+                    {
+                        "name": "TotalUsers",
+                        "state": 1
+                    },
+                    {
+                        "name": "TotalUsers",
+                        "state": 1
+                    },
+                    {
+                        "name": "TotalUsers",
+                        "state": 1
+                    }
+                ],
+                "state": 1
+            },
+            "usage": {
+                "child": [],
+                "state": 1
+            },
+            "devices": {
+                "child": [
+                    {
+                        "id": "mostComplaint",
+                        "name": "Most Complaints",
+                        "state": 1,
+                        "hstate": 1
+                    },
+                    {
+                        "id": "mostPopular",
+                        "name": "Most Popular",
+                        "state": 1,
+                        "hstate": 1
+                    },
+                    {
+                        "id": "growingFast",
+                        "name": "Fastest Growing",
+                        "state": 1,
+                        "hstate": 1
+                    },
+                    {
+                        "id": "lte",
+                        "name": "LTE",
+                        "state": 1,
+                        "hstate": 1
+                    }
+                ],
+                "state": 1
+            },
+            "traffic": {
+                "child": [],
+                "state": 1
+            },
+            "impact": {
+                "child": [
+                    {
+                        "id": "Voice",
+                        "name": "Voice",
+                        "hstate": 1,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "SMS",
+                        "name": "SMS",
+                        "hstate": 1,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Browsing",
+                        "name": "Browsing",
+                        "hstate": 1,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Roaming",
+                        "name": "Roaming",
+                        "hstate": 1,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Top_up",
+                        "name": "Top_up",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Activition",
+                        "name": "Activition",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Youtube",
+                        "name": "Youtube",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "BBC News",
+                        "name": "BBC News",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "WhatsApp",
+                        "name": "WhatsApp",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "Facebook",
+                        "name": "Facebook",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "Google",
+                        "name": "Google",
+                        "hstate": 0,
+                        "state": 1,
+                        "position": "right"
+                    }
+                ],
+                "state": 1
+            },
+            "ott": {
+                "child": [
+                    {
+                        "id": "speedTest",
+                        "name": "speedTest",
+                        "state": 1,
+                        "hstate": 1
+                    },
+                    {
+                        "id": "youtube",
+                        "name": "youtube",
+                        "state": 1,
+                        "hstate": 0
+                    },
+                    {
+                        "id": "whatsApp",
+                        "name": "whatsAPP",
+                        "state": 1,
+                        "hstate": 0
+                    }
+                ],
+                "state": 1
+            },
+            "sat": {
+                "child": [],
+                "state": 1
+            },
+            "risk": {
+                "child": [],
+                "state": 0
+            }
+        },
+        "state": 1,
+        "serverUrl": ["/ced/pad/homePageAction.do","/js/chart/data/home.json"],
+        "pageUrl": "index.html"
+    },
+    "users": {
+        "name": "Users",
+        "child": [
+            {
+                "id": "total",
+                "name": "All Users",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "inbound",
+                "name": "Inbound",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "outbound",
+                "name": "Outbound",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 0,
+        "serverUrl": ["/ced/pad/findUsersData.do","/js/chart/data/User.json"],
+        "pageUrl": "users.html"
+    },
+    "usage": {
+        "name": "Usage",
+        "child": [
+            {
+                "id": "voice",
+                "name": "Voice",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "data",
+                "name": "Data",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "sms",
+                "name": "SMS",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "voiceRoaming",
+                "name": "Voice Roaming",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "dataRoaming",
+                "name": "Data Roaming",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "smsRoaming",
+                "name": "SMS Roaming",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 0,
+        "serverUrl": ["/ced/pad/findUsageData.do","/js/chart/data/Usage.json"],
+        "pageUrl": "usage.html"
+    },
+    "devices": {
+        "name": "Devices",
+        "child": [
+            {
+                "id": "devices",
+                "name": "Devices",
+                "state": 1,
+                "child": [
+                    {
+                        "id": "mostComplaint",
+                        "name": "Most Complaints",
+                        "state": 0
+                    },
+                    {
+                        "id": "mostPopular",
+                        "name": "Most Popular",
+                        "state": 1
+                    },
+                    {
+                        "id": "growingFast",
+                        "name": "Fastest Growing",
+                        "state": 1
+                    },
+                    {
+                        "id": "lte",
+                        "name": "LTE",
+                        "state": 1
+                    }
+                ],
+                "show": 0
+            }
+        ],
+        "state": 1,
+        "isHome": 1,
+        "serverUrl": ["/ced/pad/findDeviceData.do","/js/chart/data/device.json"],
+        "pageUrl": "devices.html"
+    },
+    "traffic": {
+        "name": "Traffic",
+        "child": [
+            {
+                "id": "broadband",
+                "name": "Mobile Broadband Traffic Distribution",
+                "state": 0,
+                "show": 1
+            },
+            {
+                "id": "trend",
+                "name": "Traffic Trend",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 0,
+        "serverUrl": ["/ced/pad/findTrafficData.do","/js/chart/data/Traffic.json"],
+        "pageUrl": "traffic.html"
+    },
+    "ott": {
+        "name": "OTT Insight",
+        "child": [
+            {
+                "id": "app",
+                "name": "OTT Service Throughput Distribution",
+                "state": 1,
+                "child": [
+                    {
+                        "id": "speedTest",
+                        "name": "Speed Test",
+                        "state": 1
+                    },
+                    {
+                        "id": "youtube",
+                        "name": "Youtube",
+                        "state": 1
+                    },
+                    {
+                        "id": "whatsApp",
+                        "name": "WhatsApp",
+                        "state": 1
+                    }
+                ],
+                "title": "Interface Layout <b>OTT Type of Throughput Distribution</b>",
+                "show": 1
+            },
+            {
+                "id": "overall",
+                "name": "Overall Throughput Distribution",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "appsByTraffic",
+                "name": "Top 10 OTT Services by Traffic",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "appsByGrowth",
+                "name": "Top 10 OTT Services by Growth",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 1,
+        "serverUrl": ["/ced/pad/findOttServicesData.do","/js/chart/data/OTT.json"],
+        "pageUrl": "ott.html"
+    },
+    "sat": {
+        "name": "Satisfaction Level",
+        "child": [
+            {
+                "id": "all",
+                "name": "All Users",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "vips",
+                "name": "VIPs",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "key",
+                "name": "Key Areas",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 0,
+        "serverUrl": ["/ced/pad/findSatisfactionData.do","/js/chart/data/sat.json"],
+        "pageUrl": "sat.html"
+    },
+    "impact": {
+        "name": "User Impact",
+        "child": [
+            {
+                "id": "impact",
+                "name": "Service Performance",
+                "state": 1,
+                "child": [
+                    {
+                        "id": "Voice",
+                        "name": "Voice",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "SMS",
+                        "name": "SMS",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Browsing",
+                        "name": "Browsing",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Roaming",
+                        "name": "Roaming",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Top_up",
+                        "name": "Top_up",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Activition",
+                        "name": "Activition",
+                        "state": 1,
+                        "position": "left"
+                    },
+                    {
+                        "id": "Youtube",
+                        "name": "Youtube",
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "BBC News",
+                        "name": "BBC News",
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "WhatsApp",
+                        "name": "WhatsApp",
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "Facebook",
+                        "name": "Facebook",
+                        "state": 1,
+                        "position": "right"
+                    },
+                    {
+                        "id": "Google",
+                        "name": "Google",
+                        "state": 1,
+                        "position": "right"
+                    }
+                ],
+                "show": 1
+            },
+            {
+                "id": "map",
+                "name": "Key Areas",
+                "serverUrl": ["/ced/pad/findKeyAreaMapData.do","/js/chart/data/area.json"],
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 1,
+        "isHome": 1,
+        "serverUrl": ["/ced/pad/findUserImpactData.do","/js/chart/data/userImpact.json"],
+        "pageUrl": "impact.html"
+    },
+    "risk": {
+        "name": "Risk & Opportunity",
+        "child": [
+            {
+                "id": "potential",
+                "name": "Potential churn Analysis",
+                "state": 1,
+                "show": 1
+            },
+            {
+                "id": "data",
+                "name": "Data Consumption Analysis",
+                "state": 1,
+                "show": 1
+            }
+        ],
+        "state": 0,
+        "isHome": 0,
+        "serverUrl": ["/js/chart/data/risk.json","/js/chart/data/risk.json"],
+        "pageUrl": "risk.html"
+    },
+    "public":{
+        "serverUrl": ["/ced/pad/padCommonAction.do","/js/chart/data/public.json"]
+    }
+}

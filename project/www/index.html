@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CE Dashboard</title>
+    <meta charset="utf-8" />
+	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+
+    <link rel="stylesheet" href="css/common.css"/>
+	 <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script>
+// 获取当前国家位置	
+var country;
+$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',function(){
+	country = remote_ip_info.country;//国家
+    //console.log(country)
+});
+	</script>
+<body style="background:#232528;" ontouchmove="event.preventDefault()">
+
+<div>
+    <div  class="contents">
+        <div class="login">
+            <div class="put logo"></div>
+            <div class="put not" style="color:#AA691D;"></div>
+            <div class="put users"><div class="icon"></div>
+			<input class="text" type="text" name="textfield" value="Dashboard" id="USER" onclick="if(value==defaultValue){value='';this.style.color='#999'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999;height:1.4em;line-height:1.4em;"/>
+			</div>
+            <div class="put password"><div class="icon"></div><input class="text" id="pass" type="password" name="textfield" value="123456"  onclick="if(value==defaultValue){value='';this.style.color='#999'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999"/></div>
+            <div class="put check" ><input id="remName" type="checkbox" checked />Remember user name</div>
+            <div class="put btn" ><div class="ip">IP</div><div id="ip"><input id="ipVal" type="text" value="1.1.1.1:90" /></div> <div class="logins" >Login</div></div>
+        </div>
+
+    </div><!-- /content -->
+    <div class="copyright">powered by © huawei smartcare CEM. All rights reserved</div>
+    <div id="loadData" style="display: none;"></div>
+
+</div><!-- /page -->
+
+ <script type="text/javascript" src="js/jquery.mobile.events.mini.js"></script>
+ <script type="text/javascript" src="js/SHA-256.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+ <script type="text/javascript" src="js/MyPlguin.js"></script>
+
+<script>
+    var ipReg = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/ig;
+    var nameReg  = /^[a-z_0-9]+$/ig;
+	var passReg  = /[\s\S]*/ig;
+
+	//初始化登陆表单
+	function iniform(){
+		var userName = window.localStorage.getItem("UserName");
+		var ip = window.localStorage.getItem("serverIP");
+
+		if(ip){
+            $('#ip').show();
+			$('#ipVal').val(ip);
+		}
+		if(userName){
+			$("#USER").val(userName);
+		}
+		
+		if(userName =="Dashboard"){
+			$("#pass").val("123456");
+			$("#pswNotice").hide();
+		}
+
+        //是否记住用户名
+       if(window.localStorage.getItem("isRemName")==0){
+            $("#USER").val("please...");
+            $("#remName").removeAttr("checked")
+        }else{
+			 $("#remName").attr("checked","checked");
+		}
+	}
+	$("#ip").hide();
+
+	iniform();//初始化登陆表单
+
+	var userName,ips;
+	$(".logins").tap(function(){
+		var pass = $("#pass").val(),errors=[],port;
+		userName = $("#USER").val();
+		ips = $('#ipVal').val();
+		/*添加端口判断*/
+		var ipAry = ips.split(":");
+		ip = ipAry[0];
+		var portTrue = true;
+
+		if(ipAry.length>1){
+			port = ipAry[1];
+			if(/[0-9]+/.test(port) && Number(port)<65535){
+				portTrue = true;
+			}else{
+				portTrue = false;
+			}
+		}else{
+			portTrue = false;
+		}
+		
+        //验证
+        var passTrue = pass.match(passReg)==null?false:pass.match(passReg).length>0?true:false,
+            nameTrue = userName.match(nameReg)==null?false:userName.match(nameReg).length>0?true:false,
+            ipTrue = ip.match(ipReg)==null?false:ip.match(ipReg).length>0?true:false;
+		
+        if(!nameTrue){
+            errors.push("user name");
+        }
+
+        if(!passTrue){
+            errors.push("password");
+        }
+
+        if(!ipTrue || !portTrue){
+            errors.push("server ip:port");
+        }
+		
+        if(ipTrue && nameTrue && passTrue && portTrue){
+			$('.not').html("");
+			loginSuccess();
+      				   	
+        }else{
+            $('.not').html("*Please input valid " +errors.join(" add "));
+            $("#ip").show();
+        }
+    });
+
+
+    $(".ip").tap(function(){
+        var isHide = $("#ip:hidden");
+        isHide && isHide.length>0?$("#ip").fadeIn():$("#ip").fadeOut();
+    });
+	
+	$(".pass").tap(function(){
+        var isHide = $("#pass:hidden");
+        isHide && isHide.length>0?$("#pass").fadeIn():$("#pass").fadeOut();
+    });
+
+    $("#pass").focus(function(){
+	   $("#pass").val("");
+    });
+	
+	
+	function loginSuccess(){
+				var indexConfig = window.localStorage.getItem("INDEXCONFIG");
+				var indexSetting = window.localStorage.getItem('settings');
+				window.localStorage.clear(); 
+				if(indexConfig){
+					window.localStorage.setItem("INDEXCONFIG",indexConfig);
+				}
+				if(indexSetting){
+					window.localStorage.setItem("settings",indexSetting);
+				}
+			
+				$('.not').html("");
+				window.localStorage.setItem("UserName",userName);
+				window.localStorage.setItem("country",country);
+				window.localStorage.setItem("serverIP",ips);   
+				window.localStorage.setItem("isRemName",$("#remName:checked").length);
+				window.location.href="window/home.html";
+	}
+	
+	
+	function loginFailed(str){
+		$('.not').html("登录失败！");
+		$(".logins").html("登录");
+	}
+
+	/*
+	$("#USER").change(function(){
+		if($(this).val == "Dashboard"){
+			$("#pass").val("123456");
+		}
+	});*/
+</script>
+
+</body>
+</html>

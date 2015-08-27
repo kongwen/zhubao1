@@ -1,0 +1,44 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeSat" class="notice"></div>
+
+    <script>
+        getMessage("Sat", '/js/chart/data/message.json');
+    </script>
+
+    <div id="header" data-role="header" data-id="header" data-position="top" data-fullscreen="true"
+         data-tap-toggle="false">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>Satisfaction Level(All Users)-7Day Trend<b></b></span></div>
+        </div>
+    </div>
+    <!-- /header -->
+</div>
+<div class="content">
+    <div class="chart"></div>
+</div>
+<div class="page"></div>
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/canvas.Sat.js"></script>
+<script>
+    $.page({datas: [
+        {name:'all',url: 'sat/sat-1.html', Str: "<h3 class='tt'>All Users</h3><canvas  id=\"satMinAll\" width=\"230px\" height=\"120px\" ></canvas>"},
+        {name:'vips',url: 'sat/sat-2.html', Str: "<h3 class='tt'>VIPs</h3><canvas  id=\"satMinVip\" width=\"230px\" height=\"120px\" ></canvas>"},
+        {name:'key',url: 'sat/sat-3.html', Str: "<h3 class='tt'>Key Areas</h3><canvas  id=\"satMinKey\" width=\"230px\" height=\"120px\" ></canvas>"}
+    ]});
+	
+	
+	function drawSubMin(){
+    getDataThen(getUrl('sat'), function (data){
+        //绘制二级菜单缩略图
+        drawSatMin(optionsMin, data, "satMinAll", "#d18005", "totalUsers", "Users");
+        drawSatMin(optionsMin, data, "satMinVip", "#429230", "totalVips", "VIPs");
+        drawSatMin(optionsMin, data, "satMinKey", "#ab2d15", "totalAreas", "Areas");
+    }, 'Sat');
+	
+	}
+	drawSubMin();
+</script>

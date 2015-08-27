@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单过滤器演示</title>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var n1 = $("input").length;
+            var n2 = $(":input").length;
+            var n3 = $("form > *").length;
+            var n4 = $(":text").length;
+            var n5 = $("input[type='text']").length;
+            console.log(n1 + ',' + n2 + ','+ n3 + ','+ n4 + ',' + n5  );
+
+
+            var numInv = $(".f1 :text:hidden").length;
+            var numVis = $(".f1 :text:visible").length;
+            console.log(numInv + '-----,------' + numVis);
+            $.expr[":"].height = function(element){
+                return $(element).css("height") === "20px";
+            };
+            var heightLen = $(":height").length;
+            console.log("There are " + heightLen + " 20px divs");
+            console.log($(":height").attr("class"));
+        });
+    </script>
+</head>
+<body>
+    <form name="" method="post">
+        <input type="text"/><input type="text"/><input type="button"/>
+    </form>
+    <form name="" method="post" class="f1">
+        <input type="text" name="text1" style="display: none"/>
+        <input type="text" name="text2" style="offsetWidth:0;offsetHeight:0;"/>
+        <input type="text" name="text3" style="display: block"/>
+    </form>
+    <div style="width: 10px;height: 20px;background-color: green;" class="ssd"></div>
+    <div style="width: 10px;height: 10px;background-color: black;"></div>
+    <div style="width: 10px;height: 10px;background-color: blue;"></div>
+</body>
+</html>

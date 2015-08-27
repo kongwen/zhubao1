@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jqueryUI-button</title>
+    <link rel="stylesheet" href="js/JqueryUI/jquery-ui.css"/>
+    <style>
+        div{
+            margin: 0px auto;
+        }
+        .div1{
+            width: 200px;height: 200px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/JqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#button").siblings.button({
+             text:true,
+                icons:{
+                    primary:"ui-icon-alert",
+                    secondary:"ui-icon-lightbulb"
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <button id="button"></button>
+    </div>
+</body>
+</html>

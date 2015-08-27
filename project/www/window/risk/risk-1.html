@@ -1,0 +1,19 @@
+<h1 class="riskH1">Risk analysis for prepaid subscribers</h1>
+<div class="riskVertical2">Users</div>
+<canvas id="canvasRISK" width="1024px" height="190px" ></canvas>
+
+<h1 class="riskH1">Risk analysis for postpaid subscribers</h1>
+<div class="riskVertical3">Users</div>
+<canvas id="canvasRISKPost" width="1024px" height="190px" ></canvas>
+
+<script>
+ getDataThen(getUrl('risk'), function(data){
+	if($("#canvasRISK").size()>0){
+	 var churnData = data["potentialChurn"];
+	  linezheRISK = [];
+	  drawRiskchurn(options,"canvasRISK",churnData,"prepaid",'1');
+	  drawRiskchurn(options,"canvasRISKPost",churnData,"postpaid",'0');
+	 }
+	  changeTitle("Potential Churn Analysis ");
+}, 'RISK');
+</script>

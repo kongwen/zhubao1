@@ -1,0 +1,10 @@
+<div id="canvasUsageCon"><canvas id="canvasUsage" width="1024px" height="510px" rel="voice" rels="leftYVoice" ></canvas></div>
+<script>
+clearCanvas(1);	
+ getDataThen(getUrl('usage'), function(data){
+ if($("#canvasUsage").size()>0){
+     drawUsage(options,"canvasUsage",data);//绘制主曲线图
+}
+	 changeTitle("Voice(Min per User)-Three Month Trend ");
+ }, 'Usage');
+</script>

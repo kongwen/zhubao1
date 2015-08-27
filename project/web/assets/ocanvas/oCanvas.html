@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas 学习</title>
+</head>
+<body>
+    <canvas id="canvas" height="500" width="500"></canvas>
+</body>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#000",
+        fps: 20000
+       // drawEachFrame:false
+    });
+
+    var data = [25, 65, 10];
+
+    var prototype1 = canvas.display.arc({
+        x: 100,
+        y: 100,
+        radius: 50,
+        start:0,
+        end: 100,
+        fill: "#0aa",
+        //stroke: "10px #0aa",
+        //drawn:false,
+     pieSection: true
+
+    });
+    var prototype2 = prototype1.clone({
+        start:100,
+        end:250,
+        fill: "#fff"
+    });
+   var prototype3 = prototype1.clone({
+        start:250,
+        end: 360,
+        fill: "#B9D8F2"
+    });
+    var prototype11 = canvas.display.arc({
+        x: 20,
+        y: 20,
+        radius: 10,
+        start:0,
+        end: 360,
+        fill: "#fff",
+        //stroke: "10px #0aa",
+        //drawn:false,
+        pieSection: true
+
+    });
+    canvas.addChild(prototype1);
+   prototype1.addChild(prototype11);
+   canvas.addChild(prototype2);
+   canvas.addChild(prototype3);
+    prototype1.bind("click tap", function () {
+        this.remove(100, 20);
+        canvas.redraw();
+
+       /* var origin = this.getOrigin();
+        console.log("origin: ", origin);*/
+    });
+    var prototype = canvas.display.arc({
+        x: 200,
+        y: 200,
+        radius: 50,
+        start:0,
+        end: 360,
+        fill: "#0aa",
+        scalingX:2,
+        //stroke: "10px #0aa",
+        //drawn:false,
+        pieSection: true
+
+    });
+    canvas.addChild(prototype);
+    prototype.bind("click tap", function () {
+        this.scaleTo(200, 100);
+        canvas.redraw();
+    });
+
+    var rectangle = canvas.display.rectangle({
+        x: 77,
+        y: 270,
+        width: 200,
+        height: 100,
+        fill: "#fff"
+    });
+
+    var square = canvas.display.rectangle({
+        x: 10,
+        y: 10,
+        width: 50,
+        height: 50,
+        fill: "#0ff"
+    });
+
+    canvas.addChild(rectangle);
+
+    rectangle.addChild(square);
+</script>
+</html>

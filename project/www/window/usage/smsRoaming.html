@@ -1,0 +1,10 @@
+<div id="canvasUsageCon"><canvas id="canvasUsage" width="1024px" height="510px" rel="sms roaming" rels="leftYSmsRoaming" ></canvas></div>
+
+<script>
+ getDataThen(getUrl('usage'), function(data){
+    if($("#canvasUsage").size()>0){
+		drawUsage(options,"canvasUsage",data);//绘制主曲线图
+	}
+		changeTitle("SMS Roaming(User Day)-Three Month Trend ");
+}, 'Usage');
+</script>

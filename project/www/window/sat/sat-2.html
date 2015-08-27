@@ -1,0 +1,9 @@
+ <canvas  id="canvasTrafficTrend2" width="1024px" height="530"  rel="vip" ></canvas>
+<script>
+ getDataThen(getUrl('sat'), function(data){
+	if($("#canvasTrafficTrend2").size()>0){
+		drawSat(options,"canvasTrafficTrend2",data);
+	}
+	 changeTitle("Satisfaction Level(VIPs)-7Day Trend ");
+ }, 'Sat');
+</script>

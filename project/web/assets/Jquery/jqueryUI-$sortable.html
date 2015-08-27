@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jqueryUI-$sortable</title>
+    <link rel="stylesheet" href="js/JqueryUI/jquery-ui.css"/>
+    <style>
+        .column{
+           width: 170px;float: left;padding-bottom: 100px;
+        }
+        .column2{
+            width: 970px;float: left;
+        }
+        .portlet{
+            margin: 0 1em 1em 0;
+        }
+        .portlet-header{
+            margin: 0.3em;
+            padding: 0em  0.2em 4px 0em;
+        }
+        .portlet-header .ui-icon{
+            float: right;
+        }
+        .portlet-content{
+            padding: 0.4em;
+        }
+        .ui-state-highlight{
+            height: 1.5em;line-height: 1.2em;
+        }
+        .ui-resizable-helper{
+            border: 1px solid #ff0000;
+        }
+        #resize_me{
+            border: 1px solid #000000;
+            overflow: hidden;
+        }
+        #selectable div{
+            width: 150px;height: 30px;
+            padding: 10px;margin: 10px;
+            border: 1px solid;
+        }
+        #selectable div.ui-selecting{
+            background: blue;
+        }
+        #selectable div.ui-selected{
+            background: lightblue;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/JqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //$.sortable()
+            $(".portlet").addClass("ui-widget ui-widget-content " +
+                    "ui-helper-clearfix ui-corner-all")
+                    .find(".portlet-header")
+                    .addClass("ui-widget-header ui-corner-all")
+                    .prepend("<span class='ui-icon ui-icon-minusthick'></span>")
+                    .end()
+                    .find(".portlet-content");
+            $(".column").sortable({placeholder:"ui-state-highlight"});
+
+            //$.resizable()
+            $('div#resize_me').resizable({
+                animate:true,
+                ghost:true,
+                helper:"ui-resizable-helper",
+                minWidth:300,
+                minHeight:300
+            });
+
+            //selectable()
+            $("#selectable").selectable();
+            alert($(".item2","#selectable").html());
+        });
+    </script>
+</head>
+<body>
+   <div class="column">
+       <div class="portlet">
+           <div class="portlet-header">Task 1</div>
+           <div class="portlet-content">....</div>
+       </div>
+       <div class="portlet">
+           <div class="portlet-header">Task 2</div>
+           <div class="portlet-content">....</div>
+       </div>
+       <div class="portlet">
+           <div class="portlet-header">Task 3</div>
+           <div class="portlet-content">....</div>
+       </div>
+       <div class="portlet">
+           <div class="portlet-header">Task 4</div>
+           <div class="portlet-content">....</div>
+       </div>
+   </div>
+    <div class="column2">
+        <div id="resize_me" class="ui-widget-content">
+        <h2 class="ui-widget-header">Pork and Stuff</h2>
+        Portlet是基于java的web组件，由portlet容器管理，并由容器处理请求，生产动态内容。Portals使用portlets作为可插拔用户接口组件，提供信息系统的表示层。作为利用servlets进行web应用编程的下一步，portlets实现了web应用的模块化和用户中心化。 portlet规范，即jsr（Java Standardization Request ）168，是为了实现portal和portlet的互操作。它定义了portlet和portlet容器之间的合约，
+        让portlet实现个性化、表示和安全的api集。规范还定义了怎样在portlets应用中打包portlets…<br/>
+        Portlet是基于java的web组件，由portlet容器管理，并由容器处理请求，生产动态内容。Portals使用portlets作为可插拔用户接口组件，提供信息系统的表示层。作为利用servlets进行web应用编程的下一步，portlets实现了web应用的模块化和用户中心化。 portlet规范，即jsr（Java Standardization Request ）168，是为了实现portal和portlet的互操作。它定义了portlet和portlet容器之间的合约，
+        让portlet实现个性化、表示和安全的api集。规范还定义了怎样在portlets应用中打包portlets… <br/>
+        Portlet是基于java的web组件，由portlet容器管理，并由容器处理请求，生产动态内容。Portals使用portlets作为可插拔用户接口组件，提供信息系统的表示层。作为利用servlets进行web应用编程的下一步，portlets实现了web应用的模块化和用户中心化。 portlet规范，即jsr（Java Standardization Request ）168，是为了实现portal和portlet的互操作。它定义了portlet和portlet容器之间的合约，
+        让portlet实现个性化、表示和安全的api集。规范还定义了怎样在portlets应用中打包portlets…<br/>
+        Portlet是基于java的web组件，由portlet容器管理，并由容器处理请求，生产动态内容。Portals使用portlets作为可插拔用户接口组件，提供信息系统的表示层。作为利用servlets进行web应用编程的下一步，portlets实现了web应用的模块化和用户中心化。 portlet规范，即jsr（Java Standardization Request ）168，是为了实现portal和portlet的互操作。它定义了portlet和portlet容器之间的合约，
+        让portlet实现个性化、表示和安全的api集。规范还定义了怎样在portlets应用中打包portlets…<br/>
+
+        </div>
+    </div>
+   <div style="clear: both;"></div>
+    <div id="selectable">
+        <div class="ui-widget-content unselectable">Item 1</div>
+        <div class="ui-widget-content item2">Item 2</div>
+        <div class="ui-widget-content">Item 3</div>
+        <div class="ui-widget-content">Item 4</div>
+        <div class="ui-widget-content">Item 5</div>
+        <div class="ui-widget-content">Item 6</div>
+        <div class="ui-widget-content">Item 7</div>
+        <div class="ui-widget-content">Item 8</div>
+        <div class="ui-widget-content">Item 9</div>
+    </div>
+</body>
+</html>

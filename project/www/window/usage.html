@@ -1,0 +1,53 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeUsage" class="notice"></div>
+
+    <script>
+        getMessage("Usage");
+    </script>
+
+    <div id="header" data-role="header" data-id="header" data-position="top" data-fullscreen="true"
+         data-tap-toggle="false">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>Voice(Min per User)-Three Month Trend<b></b></span></div>
+
+        </div>
+    </div>
+    <!-- /header -->
+</div>
+
+
+<div class="content">
+    <div class="chart"></div>
+</div>
+<div class="page"></div>
+
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/public.js"></script>
+<script src="../js/chart/canvas.Uspage.js"></script>
+<script>
+    $.page({datas: [
+        {name:'voice',url: 'usage/voice-1.html', Str: "<h3 class='tt'>Voice</h3><p class='num1' id='voiceNum'><span></span><b>Min/User/Day</b></p><canvas rels='leftYVoice' rel='voice' id=\"canvasMinSMSRoaming\" width=\"180\" height=\"70\" ></canvas>"},
+        {name:'data',url: 'usage/data.html', Str: "<h3 class='tt'>Data</h3><p class='num1' id='dataNum'><span></span><b>MB/User/Day</b></p><canvas rels='leftYData' rel='data' id=\"canvasMinVoice\" width=\"180\" height=\"70\" ></canvas>"},
+        {name:'sms',url: 'usage/sms.html', Str: "<h3 class='tt'>SMS</h3><p class='num1' id='smsNum'><span></span><b>/User/Day</b></p><canvas rels='leftYSms' rel='sms' id=\"canvasMinData\" width=\"180\" height=\"70\" ></canvas>"},
+        {name:'voiceRoaming',url: 'usage/voiceRoaming.html', Str: "<h3 class='tt'>Voice  Roaming</h3><p class='num1' id='voiceRONum'><span></span><b>Min/User/Day</b></p><canvas rels='leftYVoiceRoaming' rel='voice roaming' id=\"canvasMinDataRoaming\" width=\"180\" height=\"70\" ></canvas>"},
+        {name:'dataRoaming',url: 'usage/dataRoaming.html', Str: "<h3 class='tt'>Data  Roaming</h3><p class='num1' id='dataRONum'><span></span><b>MB/User/Day</b></p><canvas rels='leftYDataRoaming' rel='data roaming' id=\"canvasMinVoiceRoaming\" width=\"180\" height=\"70\" ></canvas>"},
+        {name:'smsRoaming',url: 'usage/smsRoaming.html', Str: "<h3 class='tt'>SMS  Roaming</h3><p class='num1' id='smsRONum'><span></span><b>/User/Day</b></p><canvas rels='leftYSmsRoaming' rel='sms roaming' id=\"canvasMinSMS\" width=\"180\" height=\"70\" ></canvas>"}
+    ]});
+
+	
+	function drawSubMin(){
+    getDataThen(getUrl('usage'), function (data) {
+            drawUsage(optionsMin, "canvasMinVoice", data);
+            drawUsage(optionsMin, "canvasMinVoiceRoaming", data);
+            drawUsage(optionsMin, "canvasMinData", data);
+            drawUsage(optionsMin, "canvasMinSMS", data);
+            drawUsage(optionsMin, "canvasMinSMSRoaming", data);
+            drawUsage(optionsMin, "canvasMinDataRoaming", data);
+    }, 'Usage');
+}
+	drawSubMin();
+</script>

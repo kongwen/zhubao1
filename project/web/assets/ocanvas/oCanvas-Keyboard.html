@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-Keyboard</title>
+</head>
+<body>
+
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#00fe8a"
+    });
+    canvas.bind("keyup",function(e){
+        canvas.background.set("hsl(" + Math.random() * 360 + ", 50%, 50%)");
+        console.log(e.which , canvas.keyboard.SPACE);
+
+    });
+    canvas.keyboard.addPreventDefaultFor(canvas.keyboard.SPACE)
+   /* canvas.bind(,function(e){
+
+    });*/
+</script>
+</body>
+</html>

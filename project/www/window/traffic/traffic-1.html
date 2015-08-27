@@ -1,0 +1,31 @@
+ <div class="tCON ">
+ <canvas class="trafficeLevel3" id="canvasTrafficTrend" width="440px" height="190"   ></canvas>
+  <canvas class="trafficeLevel3" id="canvasTrafficTrend3" width="440px" height="190"  style='display:none;' ></canvas>
+ <div class="tHidden"></div>
+ </div>
+ 
+ <div class="tCON tActive">
+ <canvas class="trafficeLevel3" id="canvasTrafficTrend2" width="440px" height="190"  style='display:none;' ></canvas>
+ <canvas class="trafficeLevel3" id="canvasTrafficTrend4" width="440px" height="190"  ></canvas>
+  <div class="tHidden"></div>
+ </div>
+ 
+ <div id="lineCOns">
+ <div id="lineCOns0">
+ <canvas class="trafficContent" id="canvasTrafficTrendLine" width="1024px" height="300" ></canvas>
+</div>
+
+ <div id="lineCOns1">
+  <canvas class="trafficContent" id="voiceTraffictTrendLine" width="1024px" height="300" style="display:none;"></canvas>
+</div>
+</div>
+<script>
+	changeTitle("Traffic Volume - Three Month Trend ");
+	getDataThen(getUrl('traffic'), function(data){
+	if($("#canvasTrafficTrend").size()>0 ){
+		drawTrafficTrend(options,"canvasTrafficTrend",data);
+		
+	}
+
+}, 'Traffic');
+</script>

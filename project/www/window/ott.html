@@ -1,0 +1,81 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeOTT" class="notice"></div>
+
+    <script>
+        getMessage("OTT");
+    </script>
+
+    <div id="header">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>OTT service Throughput Distribution<b></b></span>
+            </div>
+        </div>
+    </div>
+    <!-- /header -->
+
+</div>
+<div id="content" class="content">
+    <div class="chart"></div>
+</div>
+<div class="page"></div>
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/public.js"></script>
+<script src="../js/chart/canvas.OTT.js"></script>
+<script>
+    $.page({datas:[
+        {name:'app',url: 'ott/ott-2.html', Str: "<h3 class='tt'>OTT Service Throughput Distribution</h3><canvas  id=\"canvasMinOTT2\" width=\"230px\" height=\"110px\" ></canvas>"},
+        {name:'overall',url: 'ott/ott-1.html', Str: "<h3 class='tt'>Overall Throughput Distribution</h3><canvas  id=\"canvasMinOTT\" width=\"230px\" height=\"110px\" ></canvas>"},
+		{name:'appsByTraffic',url: 'ott/ott-3.html', Str: "<h3 class='tt'>Top 10 OTT Services by Traffic</h3><div class='ottMIn' id='OTTtoptraffic' ></div>"},
+		{name:'appsByGrowth',url: 'ott/ott-4.html', Str: "<h3 class='tt'>Top 10 OTT Services by Growth</h3><div class='ottMIn' id='OTTtopgrowth' ></div>"}
+	]});
+	function drawSubMin(){
+    getDataThen(getUrl('ott'), function (data){
+        var throughdata = data["appThroughput"]["speedTest"];
+        var toptraffic = data["traffic"];
+        var topGrowth = data["growth"];
+
+
+        getDataConfig('/js/framework/data/setting.json', function(data2) {
+			var lists =  data2["ott"]["child"];
+			var curList;
+
+			for(var i = 0;i<lists.length;i++){
+				var id = lists[i]["id"];
+				if(id == "app"){
+					curList = i;
+				}
+			}
+
+			var ottConfig = lists[curList]["child"];
+            for(var i =0;i<ottConfig.length;i++){
+                var state = ottConfig[i].state;
+                if(state == '1'){
+                    var name = ottConfig[i].id;
+					if(name == 'whatsApp'){
+						name = 'whatsAPP';
+					}
+                    var throughdata =  data["appThroughput"][name];
+                    DrawOTTBarMin(optionsMin,"canvasMinOTT2",throughdata);//绘制主曲线图
+                    break;
+                }
+            }
+        }, 'settings');
+
+        if($("#OTTtoptraffic").size()>0){
+            DrawOTTTOPMin("OTTtoptraffic",toptraffic);
+        }
+        if($("#OTTtopgrowth").size()>0){
+            DrawOTTTOPMin("OTTtopgrowth",topGrowth);
+        }
+        if($("#canvasMinOTT").size()>0){
+            drawOTTOutPutPie(optionsPieMin,"canvasMinOTT",data["overallThroughput"],"2G");//绘制主曲线图
+        }
+    }, 'OTT');
+	}
+	drawSubMin();
+
+</script>

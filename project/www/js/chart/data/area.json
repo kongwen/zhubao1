@@ -1,0 +1,103 @@
+var REPORTJSON ={"date":"2014-1-14",
+"thresholds":{
+  "2G":[">300 & >50","100-300 & >50",">300 & 1-50","100-300 & 1-50"],
+  "3G":[">300 & >50","100-300 & >50",">300 & 1-50","100-300 & 1-50"],
+  "LTE":[">300 & >50","100-300 & >50",">300 & 1-50","100-300 & 1-50"]
+ },
+"areaList":[
+  {"areaid":1,"areaName":"PAKEM"},
+  {"areaid":2,"areaName":"KALASAN"}
+ ],
+"areaListDetail":
+  [
+  {"areaid":1,"longitude":23.35451,"latitude":116.674976,
+   "cellList":{
+    "2G":[
+     {"cellName":"Community2-2", "longitude":23.348718,"latitude":116.673002,"DirectionAngle":150,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community2-3", "longitude":23.353643,"latitude":116.673388,"DirectionAngle":150,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community2-4", "longitude":23.358371,"latitude":116.673260,"DirectionAngle":90,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community2-5", "longitude":23.351397,"latitude":116.669247,"DirectionAngle":30,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community2-11","longitude":23.351318,"latitude":116.677787,"DirectionAngle":270,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community2-12","longitude":23.351318,"latitude":116.677787,"DirectionAngle":30,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community2-13","longitude":23.353485,"latitude":116.681907,"DirectionAngle":270,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community2-15","longitude":23.353485,"latitude":116.681907,"DirectionAngle":30,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community2-18","longitude":23.355869,"latitude":116.677723,"DirectionAngle":270,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community2-20","longitude":23.358312,"latitude":116.682036,"DirectionAngle":30,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community2-23","longitude":23.355869,"latitude":116.668925,"DirectionAngle":90,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community2-24","longitude":23.355869,"latitude":116.677723,"DirectionAngle":30,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community2-25","longitude":23.358312,"latitude":116.682036,"DirectionAngle":150,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community2-27","longitude":23.355869,"latitude":116.677723,"DirectionAngle":150,"angle":100,"radius":300,"range":3}
+    	],
+    "3G":[
+     {"cellName":"Community3-5", "longitude":23.348718,"latitude":116.673002,"DirectionAngle":150,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community3-6", "longitude":23.353643,"latitude":116.673388,"DirectionAngle":150,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community3-8", "longitude":23.358371,"latitude":116.673260,"DirectionAngle":90,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community3-10","longitude":23.351397,"latitude":116.669247,"DirectionAngle":30,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community3-11","longitude":23.351318,"latitude":116.677787,"DirectionAngle":270,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community3-15","longitude":23.351318,"latitude":116.677787,"DirectionAngle":30,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community3-16","longitude":23.353485,"latitude":116.681907,"DirectionAngle":270,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community3-17","longitude":23.353485,"latitude":116.681907,"DirectionAngle":30,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community3-21","longitude":23.355869,"latitude":116.677723,"DirectionAngle":270,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community3-22","longitude":23.358312,"latitude":116.682036,"DirectionAngle":30,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community3-23","longitude":23.355869,"latitude":116.668925,"DirectionAngle":90,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community3-26","longitude":23.355869,"latitude":116.677723,"DirectionAngle":30,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community3-27","longitude":23.358312,"latitude":116.682036,"DirectionAngle":150,"angle":100,"radius":300,"range":3}   ],
+    "LTE":[                   
+     {"cellName":"Community4-1", "longitude":23.348718,"latitude":116.673002,"DirectionAngle":150,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community4-5", "longitude":23.353643,"latitude":116.673388,"DirectionAngle":150,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community4-6", "longitude":23.358371,"latitude":116.673260,"DirectionAngle":90,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community4-8", "longitude":23.351397,"latitude":116.669247,"DirectionAngle":30,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community4-9", "longitude":23.351318,"latitude":116.677787,"DirectionAngle":270,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community4-13","longitude":23.351318,"latitude":116.677787,"DirectionAngle":30,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community4-15","longitude":23.353485,"latitude":116.681907,"DirectionAngle":270,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community4-16","longitude":23.353485,"latitude":116.681907,"DirectionAngle":30,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community4-17","longitude":23.355869,"latitude":116.677723,"DirectionAngle":270,"angle":100,"radius":300,"range":4},
+     {"cellName":"Community4-18","longitude":23.358312,"latitude":116.682036,"DirectionAngle":30,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community4-19","longitude":23.355869,"latitude":116.668925,"DirectionAngle":90,"angle":100,"radius":300,"range":2},
+     {"cellName":"Community4-23","longitude":23.355869,"latitude":116.677723,"DirectionAngle":30,"angle":100,"radius":300,"range":3},
+     {"cellName":"Community4-25","longitude":23.358312,"latitude":116.682036,"DirectionAngle":150,"angle":100,"radius":300,"range":1},
+     {"cellName":"Community4-27","longitude":23.355869,"latitude":116.677723,"DirectionAngle":150,"angle":100,"radius":300,"range":1}]
+   }
+  },
+  {"areaid":2,"longitude":23.464309,"latitude":116.769841,
+   "cellList":{
+    "2G":[
+     {"cellName":"Community12-1", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":30,"angle":100,"radius":260,"range":1},
+     {"cellName":"Community12-2", "longitude":23.462242,"latitude":116.765463,"DirectionAngle":30,"angle":100,"radius":260,"range":3},
+     {"cellName":"Community12-8", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":150,"angle":100,"radius":260,"range":2},
+     {"cellName":"Community12-9", "longitude":23.466809,"latitude":116.774154,"DirectionAngle":30,"angle":100,"radius":260,"range":2},
+     {"cellName":"Community12-10","longitude":23.464388,"latitude":116.769841,"DirectionAngle":30,"angle":100,"radius":260,"range":3},
+     {"cellName":"Community12-12","longitude":23.464388,"latitude":116.769841,"DirectionAngle":150,"angle":100,"radius":260,"range":3},
+     {"cellName":"Community12-15","longitude":23.468679,"latitude":116.768746,"DirectionAngle":270,"angle":100,"radius":260,"range":1},
+     {"cellName":"Community12-17","longitude":23.459861,"latitude":116.769691,"DirectionAngle":30,"angle":100,"radius":260,"range":3},
+     {"cellName":"Community12-20","longitude":23.464388,"latitude":116.769841,"DirectionAngle":270,"angle":100,"radius":260,"range":4},
+     {"cellName":"Community12-21","longitude":23.462006,"latitude":116.774111,"DirectionAngle":270,"angle":100,"radius":260,"range":4}
+    ],
+    "3G":[
+     {"cellName":"Community13-2", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":30,"angle":80,"radius":240,"range":2},
+     {"cellName":"Community13-3", "longitude":23.462242,"latitude":116.765463,"DirectionAngle":30,"angle":80,"radius":240,"range":1},
+     {"cellName":"Community13-6", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":150,"angle":80,"radius":240,"range":2},
+     {"cellName":"Community13-7", "longitude":23.466809,"latitude":116.774154,"DirectionAngle":30,"angle":80,"radius":240,"range":3},
+     {"cellName":"Community13-11","longitude":23.464388,"latitude":116.769841,"DirectionAngle":30,"angle":80,"radius":240,"range":3},
+     {"cellName":"Community13-12","longitude":23.464388,"latitude":116.769841,"DirectionAngle":150,"angle":80,"radius":240,"range":4},
+     {"cellName":"Community13-15","longitude":23.468679,"latitude":116.768746,"DirectionAngle":270,"angle":80,"radius":240,"range":3},
+     {"cellName":"Community13-16","longitude":23.459861,"latitude":116.769691,"DirectionAngle":30,"angle":80,"radius":240,"range":4},
+     {"cellName":"Community13-20","longitude":23.464388,"latitude":116.769841,"DirectionAngle":270,"angle":80,"radius":240,"range":3},
+     {"cellName":"Community13-21","longitude":23.462006,"latitude":116.774111,"DirectionAngle":270,"angle":80,"radius":240,"range":1}
+    ],
+    "LTE":[
+     {"cellName":"Community14-2", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":30,"angle":60,"radius":340,"range":2},
+     {"cellName":"Community14-4", "longitude":23.462242,"latitude":116.765463,"DirectionAngle":30,"angle":60,"radius":340,"range":1},
+     {"cellName":"Community14-5", "longitude":23.466868,"latitude":116.765549,"DirectionAngle":150,"angle":60,"radius":340,"range":1},
+     {"cellName":"Community14-7", "longitude":23.466809,"latitude":116.774154,"DirectionAngle":30,"angle":60,"radius":340,"range":3},
+     {"cellName":"Community14-8", "longitude":23.464388,"latitude":116.769841,"DirectionAngle":30,"angle":60,"radius":340,"range":2},
+     {"cellName":"Community14-12","longitude":23.464388,"latitude":116.769841,"DirectionAngle":150,"angle":60,"radius":340,"range":4},
+     {"cellName":"Community14-14","longitude":23.468679,"latitude":116.768746,"DirectionAngle":270,"angle":60,"radius":340,"range":2},
+     {"cellName":"Community14-16","longitude":23.459861,"latitude":116.769691,"DirectionAngle":30,"angle":60,"radius":340,"range":4},
+     {"cellName":"Community14-18","longitude":23.464388,"latitude":116.769841,"DirectionAngle":270,"angle":60,"radius":340,"range":1},
+     {"cellName":"Community14-20","longitude":23.462006,"latitude":116.774111,"DirectionAngle":270,"angle":60,"radius":340,"range":3}
+    ]
+   }
+  }
+  ]
+}

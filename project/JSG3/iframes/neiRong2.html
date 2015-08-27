@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="padding: 5px;width: 180px;margin: auto;border:1px solid #010205;">
+        <h3 style="margin: 0px">iframe页面</h3>
+        <p>徵元宗</p>
+        <p>掌门（徵元子：临）</p>
+        <p>七大峰（司刑（仙、人、妖（三界浮屠刑牢））、司兵（凡兵、天兵）、司礼（衣、食、住）、司造（丹、鼎、工）、司户（人口、行、灵石等物）、司农（灵植、凡食）、三元峰）</p>
+        <p>三元峰（元鸣（女，剑修，七玄及邱谨行师傅）、元恒（男，丹修，七真半个师傅）、元莘（男，灵植，七真及邱茗芊（三生镜）师傅，身体会随着四季变化））</p>
+        <div id="pClose" style="background: #008000;">点我隐藏父页面元素</div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.7.1.js"></script>
+    <script  type="text/javascript">
+        ;(function($){
+            $('#pClose').click(function(){
+                console.log(window.top.document)
+                $(window.top.document).find('#close').hide();
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

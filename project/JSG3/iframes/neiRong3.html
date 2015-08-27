@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="padding: 5px;width: 180px;margin: auto;border:1px solid #010205;">
+        <h3 style="margin: 0px">iframe页面</h3>
+        <p>五大仙门</p>
+        <p>混沌阴阳（掌门傀天工，善傀儡术（杂学），非生非死，借物以生，换物以死）</p>
+        <p>道合（掌门俞明子，善体术，历练自身，修形体，武术之道）</p>
+        <p>玄门（门主玄焰，善火测，其妻尚善，善水测，圤算，感悟，修天道）</p>
+        <p>苗木宗（宗主苗月仙子，有仙树一棵）</p>
+        <p>山风无梦（山主游无梦，女，有守山圣兽，主修召唤契约）</p>
+
+        <div id="pClose" style="background: #008000;">点我隐藏父页面元素</div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.7.1.js"></script>
+    <script  type="text/javascript">
+        ;(function($){
+            $('#pClose').click(function(){
+                console.log(window.top.document)
+                $(window.top.document).find('#close').hide();
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

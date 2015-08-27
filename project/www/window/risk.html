@@ -1,0 +1,43 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeOTT" class="notice"></div>
+
+    <script>
+        getMessage("OTT");
+    </script>
+
+    <div id="header">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>Potential Churn Analysis   <b></b></span>
+            </div>
+        </div>
+    </div>
+    <!-- /header -->
+
+</div>
+<div id="content" class="content">
+    <div class="chart"></div>
+</div>
+<div class="page"></div>
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/canvas.RISK.js"></script>
+
+<script>
+    $.page({datas:[
+        {name:'potential',url: 'risk/risk-1.html', Str: "<h3 class='tt'>Potential Churn Analysis</h3><canvas  id=\"canvasMinRISK\" width=\"230px\" height=\"120px\" ></canvas>"},
+        {name:'data',url: 'risk/risk-2.html', Str: "<h3 class='tt'>Data Consumption Analysis</h3><canvas  id=\"canvasMinRISKS\" width=\"210px\" height=\"120px\" ></canvas>"}
+	]});
+	
+	function drawSubMin(){
+		getDataThen(getUrl('risk'), function (data){
+            var prePost = data["potentialChurn"]["prepaidAndpostpaid"]
+            DrawRISKMIN(optionsMin,prePost,"canvasMinRISK");
+            var Consumption = data["dataConsumption"];
+			drawRISKConMin(optionsMin,Consumption,"canvasMinRISKS");
+		}, 'RISK');
+	}
+	drawSubMin();
+</script>

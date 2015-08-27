@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap基础模板</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="vendor/html5shiv.min.js"></script>
+    <script src="vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="hi">你好，世界！</h1>
+<h2 class="hi">你好，世界！</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8">.col-sm-12 .col-md-8</div>
+        <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+        <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+        <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-6">.col-sm-6</div>
+    </div>
+</div>
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active">
+        <a data-toggle="tab" href="#home">首页</a>
+    </li>
+    <li class="">
+        <a data-toggle="tab" href="#profile">个人资料</a>
+    </li>
+    <li class="dropdown">
+        <!-- 单击"我的书籍"时,弹出下拉菜单 -->
+        <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+            我的书籍
+            <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a data-toggle="tab" href="#dropdown1">JavaScript编程精解</a>
+                </li>
+                <li><a data-toggle="tab" href="#dropdown2">JavaScript设计
+                    模式</a></li>
+                <li><a data-toggle="tab" href="#dropdown3">JavaScript启示
+                    录</a></li>
+                <li><a data-toggle="tab" href="#dropdown4">深入理解
+                    Bootstrap</a></li>
+            </ul>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div id="home" class="tab-pane fade active in">
+        <p>单击"首页"时显示该区域</p>
+    </div>
+    <div id="profile" class="tab-pane fade">
+        <p>单击"个人资料"时显示该区域
+        </p>
+    </div>
+    <div id="dropdown1" class="tab-pane fade">
+        <p>单击"JavaScript编程精解"时显示该区域</p>
+    </div>
+    <div id="dropdown2" class="tab-pane fade">
+        <p>单击"JavaScript设计模式"时显示该区域</p>
+    </div>
+    <div id="dropdown3" class="tab-pane fade">
+        <p>单击"JavaScript启示录"时显示该区域</p>
+    </div>
+    <div id="dropdown4" class="tab-pane fade">
+        <p>单击"深入理解Bootstrap3"时显示该区域</p>
+    </div>
+</div>
+<abbr title="JavaScript设计模式是一本专门讲解设计模式的专业书籍">JavaScript设计模式</abbr>
+<abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+<blockquote>
+    <p>不愤不启,不悱不发。 举一隅,不以三隅反,则吾不复也。 </p>
+    <small>出自 <cite title="论语•述而">论语</cite></small>
+</blockquote>
+<code>&lt;body&gt; &lt;/body&gt;</code>
+<pre>
+    &lt;blockquote&gt;
+        &lt;p&gt;不愤不启,不悱不发。 举一隅,不以三隅反,则吾不复也。 &lt;/p&gt;
+        &lt;small&gt;出自 &lt;cite title="论语•述而">论语&lt;/cite&gt;&lt;/small&gt;
+   &lt;/blockquote&gt;
+</pre>
+<form class="form-inline">
+    <div class="form-group">
+        <label>用户名:</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="请输入你
+的用户名">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="请输入你
+的密码">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox">记住密码</label>
+    </div>
+    <button type="submit" class="btn btn-default">登录</button>
+</form>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="account" class="col-sm-2 control-label">用户名</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id=" account "
+                   placeholder="请输入你的用户名">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password " class="col-sm-2 control-label">密码
+        </label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password"
+                   placeholder="请输入你的密码">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox"><label><input type="checkbox">记住密码</
+                label></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">登录</button>
+        </div>
+    </div>
+</form>
+<fieldset disabled>
+    <legend><input/></legend>
+    <input type="text" placeholder="Disabled input">
+    <select>
+        <option>不可选择</option>
+    </select>
+    <div class="checkbox">
+        <label><input type="checkbox">记住密码</label>
+    </div>
+    <button type="submit" class="btn btn-primary">提交</button>
+</fieldset>
+
+<div class="form-group has-warning">
+    <label class="control-label" for="inputWarning">输入长度不
+        够！ </label>
+    <input type="text" class="form-control" id="Text1">
+</div>
+<div class="form-group has-error">
+    <label class="control-label" for="inputError">输入不符合要
+        求！ </label>
+    <input type="text" class="form-control" id="Text2">
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="inputSuccess">输入文本符合要
+        求！ </label>
+    <input type="text" class="form-control" id="Text3">
+</div>
+<p class="text-muted  bg-success">JavaScript编程精解</p>
+<p class="text-primary bg-success "><span class="text-hide">JavaScript设计模式</span></p>
+<p class="text-success">JavaScript启示录</p>
+<p class="text-info">Backbone应用开发实战</p>
+<p class="text-warning">深入理解Bootstrap3</p>
+<p class="text-danger">编写可测试的JavaScript</p>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script >
+  $('h1').on('click.xxx',function(){
+      alert(333)
+    });
+  $('h1').on('click.ppp',function(){
+      alert(666)
+  });
+    $('h2').on('click.sss',function(){
+      //  alert(22)
+    });
+   // $('h1').trigger("click.xxx");
+  $('h1').off('click.ppp');
+
+</script>
+</body>
+</html>

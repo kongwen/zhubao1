@@ -1,0 +1,227 @@
+var REPORTJSON = {
+    "home1To7": {
+        "satisfactionLevel": [
+            {
+                "typeKey": "AllUsersSatisfaction",
+                "value1": "10584604"
+            },
+            {
+                "typeKey": "AllUsersRate",
+                "value1": "78%"
+            },
+            {
+                "typeKey": "VIPSatisfaction",
+                "value1": "985"
+            },
+            {
+                "typeKey": "VIPRate",
+                "value1": "85%"
+            },
+            {
+                "typeKey": "KeyAreaSatisfaction",
+                "value1": "10"
+            },
+            {
+                "typeKey": "KeyAreaRate",
+                "value1": "50%"
+            },
+			{typeKey:'allUserThresholds',value1:60,value2:80},
+			{typeKey:'vipThresholds',value1:60,value2:80},
+			{typeKey:'areaThresholds',value1:60,value2:80}
+        ],
+        "users": [
+            {
+                "typeKey": "Total",
+                "value1": "10584604"
+            },
+            {
+                "typeKey": "Inbound",
+                "value1": "173188"
+            },
+            {
+                "typeKey": "Outbound",
+                "value1": "90336"
+            }
+        ],
+        "devices": [
+            {
+                "typeKey": "Most Complaint",
+                "value1": "CSL BLUEBERRY I6100"
+            },
+            {
+                "typeKey": "Most Popular",
+                "value1": "BLACKBERRY CURVE 8520"
+            },
+            {
+                "typeKey": "Fastest Growing",
+                "value1": "NOKIA 6020"
+            },
+            {
+                "typeKey": "LTE",
+                "value1": "APPLE IPHONE 5"
+            }
+        ],
+        "traffic": [       
+            {
+                "typeKey": "Device Limitation",
+                "value1": "2%"
+            },
+            {
+                "typeKey": "Contract Limitation",
+                "value1": "4%"
+            },
+            {
+                "typeKey": "Technical Issues",
+                "value1": "17%"
+            },
+			{
+                "typeKey": "Normal",
+                "value1": "77%"
+            }
+        ],
+        "usages": [
+            {
+                "typeKey": "Voice",
+                "value1": "1.5",
+                "value2": "0"
+            },
+			{
+                "typeKey": "VoiceRoming",
+                "value1": "0.0",
+                "value2": "-"
+            },
+            {
+                "typeKey": "Data",
+                "value1": "27.6",
+                "value2": "+"
+            },
+			 {
+                "typeKey": "DataRoming",
+                "value1": "0.4",
+                "value2": "0"
+            },
+            {
+                "typeKey": "SMS",
+                "value1": "8.4",
+                "value2": "+"
+            },
+            {
+                "typeKey": "SMSRoming",
+                "value1": "0.1",
+                "value2": "0"
+            }
+        ],
+			"userImpact":[
+								{"typeKey":"Voice","value1":"1496224","value2":"1497000","value3":"160"},
+								{"typeKey":"Top_up","value1":"1567","value2":"1660","value3":"35"},
+								{"typeKey":"Youtube","value1":"225176","value2":"225200","value3":"90"},
+								{"typeKey":"SMS","value1":"1484337","value2":"1484350","value3":"130"},
+								{"typeKey":"Browsing","value1":"3813277","value2":"3814000","value3":"254"},
+								{"typeKey":"Roaming","value1":"351420","value2":"335025","value3":"153"},
+								{"typeKey":"Activition","value1":"1225","value2":"1200","value3":"22"},
+								{"typeKey":"BBC News","value1":"205716","value2":"205700","value3":"80"},
+								{"typeKey":"whatApp","value1":"116257","value2":"116300","value3":"52"},
+								{"typeKey":"Facebook","value1":"585575","value2":"585000","value3":"63"},
+								{"typeKey":"Google","value1":"754857","value2":"555800","value3":"122"}
+			],
+			"ottInsightTop3":[
+								{"typeKey":"Top3AppsByTraffic","value1":"YOUTUBE","value2":1},
+								{"typeKey":"Top3AppsByTraffic","value1":"GOOGLEVIDEO","value2":2},
+								{"typeKey":"Top3AppsByTraffic","value1":"BlackBerry Message","value2":3},
+								{"typeKey":"Top3AppsByGrowth","value1":"Funshion","value2":1},
+								{"typeKey":"Top3AppsByGrowth","value1":"Netfolder","value2":2},
+								{"typeKey":"Top3AppsByGrowth","value1":"Qvod","value2":3}
+			]
+},
+		"home9Risk":{
+						"rightY":"$35000K",
+						"leftY":40000,
+						"bottomX":["01-15-2014","01-22-2014","01-29-2014","02-05-2014","02-12-2014","02-19-2014","02-26-2014","03-05-2014","03-12-2014"],
+						"number":{"churnUsers":[35196,35196,38464,38967,38213,33436,27151,26397],
+							      "capitalLost":[28921,27803,31766,31860,33953,28592,22949,20573]
+						}
+		},
+		"home8OttInsight":{
+						"ottInsight":[
+									  {"typeKey":"Speed Test","value1":"leftY","value2":"1000"},
+									  {"typeKey":"Speed Test","value1":"0-10M","value2":"2G","value3":"20"},
+									  {"typeKey":"Speed Test","value1":"0-10M","value2":"3G","value3":"35"},
+									  {"typeKey":"Speed Test","value1":"0-10M","value2":"LTE","value3":"48"},
+									  
+									  {"typeKey":"Speed Test","value1":"10-20M","value2":"2G","value3":"302"},
+									  {"typeKey":"Speed Test","value1":"10-20M","value2":"3G","value3":"531"},
+									  {"typeKey":"Speed Test","value1":"10-20M","value2":"LTE","value3":"221"},
+									  
+									  {"typeKey":"Speed Test","value1":"20-30M","value2":"2G","value3":"30"},
+									  {"typeKey":"Speed Test","value1":"20-30M","value2":"3G","value3":"181"},
+									  {"typeKey":"Speed Test","value1":"20-30M","value2":"LTE","value3":"333"},
+									  
+									  {"typeKey":"Speed Test","value1":"30-40M","value2":"2G","value3":"10"},
+									  {"typeKey":"Speed Test","value1":"30-40M","value2":"3G","value3":"20"},
+									  {"typeKey":"Speed Test","value1":"30-40M","value2":"LTE","value3":"346"},
+									  
+									  {"typeKey":"Speed Test","value1":"40-50M","value2":"2G","value3":"0"},
+									  {"typeKey":"Speed Test","value1":"40-50M","value2":"3G","value3":"35"},
+									  {"typeKey":"Speed Test","value1":"40-50M","value2":"LTE","value3":"920"},
+									  
+									  {"typeKey":"Speed Test","value1":">50M","value2":"2G","value3":"0"},
+									  {"typeKey":"Speed Test","value1":">50M","value2":"3G","value3":"42"},
+									  {"typeKey":"Speed Test","value1":">50M","value2":"LTE","value3":"322"},
+									  
+									  
+									  {"typeKey":"youtube","value1":"leftY","value2":"380000"},
+									  {"typeKey":"youtube","value1":"0-128K","value2":"2G","value3":"28432"},
+									  {"typeKey":"youtube","value1":"0-128K","value2":"3G","value3":"102604"},
+									  {"typeKey":"youtube","value1":"0-128K","value2":"LTE","value3":"20032"},
+									  
+									  {"typeKey":"youtube","value1":"128-256K","value2":"2G","value3":"6467"},
+									  {"typeKey":"youtube","value1":"128-256K","value2":"3G","value3":"121656"},
+									  {"typeKey":"youtube","value1":"128-256K","value2":"LTE","value3":"18183"},
+									  
+									  {"typeKey":"youtube","value1":"256-512K","value2":"2G","value3":"8794"},
+									  {"typeKey":"youtube","value1":"256-512K","value2":"3G","value3":"365226"},
+									  {"typeKey":"youtube","value1":"256-512K","value2":"LTE","value3":"16483"},
+									  
+									  {"typeKey":"youtube","value1":"512K-1M","value2":"2G","value3":"7177"},
+									  {"typeKey":"youtube","value1":"512K-1M","value2":"3G","value3":"301105"},
+									  {"typeKey":"youtube","value1":"512K-1M","value2":"LTE","value3":"19543"},
+									  
+									  {"typeKey":"youtube","value1":"1-5M","value2":"2G","value3":"6264"},
+									  {"typeKey":"youtube","value1":"1-5M","value2":"3G","value3":"273095"},
+									  {"typeKey":"youtube","value1":"1-5M","value2":"LTE","value3":"12343"},
+									  
+									  {"typeKey":"youtube","value1":">5M","value2":"2G","value3":"816"},
+									  {"typeKey":"youtube","value1":">5M","value2":"3G","value3":"40990"},
+									  {"typeKey":"youtube","value1":">5M","value2":"LTE","value3":"20453"},
+									  
+									  
+									  
+									  {"typeKey":"whatsAPP","value1":"leftY","value2":"500000"},
+									  {"typeKey":"whatsAPP","value1":"0-128K","value2":"2G","value3":"375038"},
+									  {"typeKey":"whatsAPP","value1":"0-128K","value2":"3G","value3":"481297"},
+									  {"typeKey":"whatsAPP","value1":"0-128K","value2":"LTE","value3":"253444"},
+									  
+									  {"typeKey":"whatsAPP","value1":"128-256K","value2":"2G","value3":"40410"},
+									  {"typeKey":"whatsAPP","value1":"128-256K","value2":"3G","value3":"51228"},
+									  {"typeKey":"whatsAPP","value1":"128-256K","value2":"LTE","value3":"143346"},
+									  
+									  {"typeKey":"whatsAPP","value1":"256-512K","value2":"2G","value3":"21630"},
+									  {"typeKey":"whatsAPP","value1":"256-512K","value2":"3G","value3":"28026"},
+									  {"typeKey":"whatsAPP","value1":"256-512K","value2":"LTE","value3":"75222"},
+									  
+									  {"typeKey":"whatsAPP","value1":"512K-1M","value2":"2G","value3":"11576"},
+									  {"typeKey":"whatsAPP","value1":"512K-1M","value2":"3G","value3":"15084"},
+									  {"typeKey":"whatsAPP","value1":"512K-1M","value2":"LTE","value3":"36678"},
+									  
+									  {"typeKey":"whatsAPP","value1":"1-5M","value2":"2G","value3":"10302"},
+									  {"typeKey":"whatsAPP","value1":"1-5M","value2":"3G","value3":"13546"},
+									  {"typeKey":"whatsAPP","value1":"1-5M","value2":"LTE","value3":"14544"},
+									  
+									  {"typeKey":"whatsAPP","value1":">5M","value2":"2G","value3":"2410"},
+									  {"typeKey":"whatsAPP","value1":">5M","value2":"3G","value3":"3222"},
+									  {"typeKey":"whatsAPP","value1":">5M","value2":"LTE","value3":"5256"}
+
+									]
+			}
+			
+    }

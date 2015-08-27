@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*首页*/
+.header-top {
+   margin: 0px;
+   border-top: 4px solid #A7B1EE;
+}
+.header-top .logo{
+    padding: 10px 0px;
+}
+.header-top .nav li{
+    float: left;
+    padding: 10px;
+}
+.header-top .nav li.active,.header-top .nav li:hover{
+    background: #A7B1EE;
+}
+.nav li.active a,.nav li a:hover{
+    color: #ffffff;
+    background:none;
+}
+footer .copyRight{
+    background: #F0F0F0;
+    padding: 1em;
+}
+footer .copyRight p{
+    margin: 0;
+    font-size: 0.875em;
+    color: #978489;
+}

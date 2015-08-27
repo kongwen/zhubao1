@@ -1,0 +1,26 @@
+.bg-buttonOn-list,.bg-buttonOff-list
+{
+	background:url('../images/bg.png') no-repeat;
+	display:inline-block;
+	vertical-align:middle;
+}
+.bg-buttonOn-list,.btnOn
+{
+	position:relative;
+	width:74px;
+	height:20px;
+	background-position:0px -829px;
+}
+.bg-buttonOn-list a,.bg-buttonOff-list a
+{
+	display:inline-block;
+	width:37px;
+	height:20px;
+}
+.bg-buttonOff-list,.btnOff
+{
+	position:relative;
+	width:74px;
+	height:20px;
+	background-position:-74px -829px;	
+}

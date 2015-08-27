@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-Sprite</title>
+</head>
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#00fe8a"
+    });
+
+  /*  var img = canvas.display.image({
+        x:50,
+        y:50,
+        origin:{x:"center",y:"center"},
+        image:"img/01.jpg"
+    });
+*/
+    /*canvas.addChild(img);*/
+    var arrSprite = canvas.display.sprite({
+        x:50,
+        y:50,
+        origin: { x: "left", y: "center" },
+        image:"img/as_01.png",
+        generate:true,
+        width:60,
+        height:63,
+        direction:"x",
+        offset_y:0,
+        duration:90
+
+    });
+
+    canvas.addChild(arrSprite);
+
+    arrSprite.startAnimation();
+    //arrSprite.active =false;
+    var arrSprite1 = canvas.display.sprite({
+        x:150,
+        y:150,
+        origin: { x: "left", y: "top" },
+        image:"img/as_02.png",
+        generate:true,
+        width:120,
+        height:312,
+        direction:"x",
+       /* offset_x:1,
+        offset_y:1,*/
+        duration:90
+    });
+
+    canvas.addChild(arrSprite1);
+    arrSprite1.startAnimation();
+</script>
+</body>
+</html>

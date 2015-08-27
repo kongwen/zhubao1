@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-Mouse</title>
+</head>
+<body>
+
+<canvas id="canvas" height="500" width="500"></canvas>
+<canvas id="canvas1" height="50" width="50"></canvas>
+<canvas id="canvas2" height="50" width="50"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#00fe8a"
+    });
+    var canvas1 = oCanvas.create({
+        canvas: "#canvas1",
+        background: "#00fe8a"
+    });
+    var canvas2 = oCanvas.create({
+        canvas: "#canvas2",
+        background: "#00fe8a"
+    });
+    var rect = canvas.display.rectangle({
+        x:200,
+        y:200,
+        width:100,
+        height:100,
+        fill:"#000"
+    });
+    canvas.addChild(rect);
+    rect.bind('click',function(){
+        rect.fill="#fff";
+        canvas.redraw();
+        //canvas.mouse.hide();
+        canvas1.mouse.onCanvas()
+    }).bind('mousedown',function(){
+        canvas.mouse.cancel();
+        rect.fill="#ff0";
+        canvas.redraw();
+    });
+    canvas1.setLoop(function () {
+        console.log(canvas1.mouse.onCanvas());
+        //canvas.mouse.onCanvas() ? "Yes" : "No";
+    },10000).start();
+</script>
+</body>
+</html>

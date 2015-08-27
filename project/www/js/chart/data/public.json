@@ -1,0 +1,9 @@
+var REPORTJSON = {
+    "hotMessages":[
+					{"date":"11-15-2013","content":"Nov.15,2013 to Nov.22,2013 network adjustment."},
+					{"date":"11-23-2013","content":"Nov.23,2013 network adjustment fallback."},
+					{"date":"12-8-2013","content":"Dec.08,2013 network adjustment success."},
+				],
+	"yesterday":"1-14-2014",
+	"isReadMark":1
+}

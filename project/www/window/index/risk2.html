@@ -1,0 +1,19 @@
+<div rel="risk.html"  type="risk2">
+        <h1>RISK & OPPORTUNITY</h1>
+
+        <div class="indexRisk">
+            <span class="riskTitle"> Potential churn analysis</span>
+			<div class="riskVerticalIndex2">Users</div>
+            <canvas style='margin-top:10px;' id="indexRisk" width="680px" height="170px"></canvas>
+        </div>
+		<script>
+            /*无后台接口暂时不展示*/
+			var UserName = window.localStorage.getItem("UserName");
+			if(UserName=="Dashboard"){
+				var riskData = HOMEDATA["home9Risk"];
+				if(riskData){
+					indexiniRISK(riskData,"indexRisk");
+				}
+			}
+		</script>
+    </div>

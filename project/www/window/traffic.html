@@ -1,0 +1,47 @@
+<div class="dataCon"></div>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp1">exit</div>
+    <div class="setting"></div>
+    <div id="noticeTraffic" class="notice"></div>
+
+    <script>
+        getMessage("Traffic");
+    </script>
+    <div id="header" data-role="header" data-id="header" data-position="top" data-fullscreen="true"
+         data-tap-toggle="false">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span> <b></b></span></div>
+        </div>
+    </div>
+    <!-- /header -->
+</div>
+
+<div class="content" id="trafficCon" choice='0'>
+    <div class="chart"></div>
+</div>
+<div class="page"></div>
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/public.js"></script>
+<script src="../js/chart/canvas.Traffic.js"></script>
+<script>
+    $.page({datas:[
+        {name:'broadband',url: 'traffic/traffic-2.html', Str: "<h3 class='tt'>Mobile Broadband Traffic Distribution</h3><canvas  style='margin-top:-20px;' id=\"trafficMinDistribution\" width=\"230px\" height=\"120px\" ></canvas>"},
+		{name:'trend',url: 'traffic/traffic-1.html', Str: "<h3 class='tt'>Traffic Trend</h3><canvas style='margin:0;'  id=\"trafficMinTrend\" width=\"240px\" height=\"120px\" ></canvas>"}
+    ]});
+	function drawSubMin(){
+    getDataThen(getUrl('traffic'), function (data) {
+        var menuData = data["menuData"];
+        var ary = data["traficDistributionCircle"];
+        //绘制趋势缩略图
+        if(menuData && menuData.length>0){
+
+            drawTrafficMinTrend(optionsMin, menuData, "trafficMinTrend");
+		}
+		 if(ary && ary.length>0){
+            drawTrafficMinDistriBute(optionsMinDis, ary, "trafficMinDistribution", color2);
+        }
+    }, 'Traffic');
+	}
+	drawSubMin();
+</script>

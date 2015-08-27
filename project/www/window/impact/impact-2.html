@@ -1,0 +1,17 @@
+<div id="map-canvas" style="top:0em;" ></div>
+<script>
+	var mapUrl = getSettingObj('impact').child[1].serverUrl[settingIndex];
+	getDataThen(mapUrl, function(data){
+		if(data){
+			var list = data['areaListDetail'];
+			if(list.length>0){
+				var firstAreaId = getFirstArea(data);
+				makemap(firstAreaId,data);
+				leftAreaControl(data);
+				$("#leftCon dd:eq(0)").tap();
+			}
+		}
+	}, 'keyArea');
+
+changeTitle("Key Areas");
+</script>

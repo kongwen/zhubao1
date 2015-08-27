@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>qunit-hello world!</title>
+    <link rel="stylesheet" href="js/qunit/qunit-1.18.0.css"/>
+</head>
+<body>
+    <h1 id="qunit-header">QUnit example</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">Test Markup</div>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        ;(function($){
+            test("Hello World",function(){
+                var message = "hello world";
+                equal(message,
+                    "hello world",
+                    "We expect the message to match");
+            });
+            test("Hello World2",function(){
+                var message = "Goodbye cruel world";
+                equal(message,
+                        "hello world",
+                        "We expect the message to match");
+            });
+
+            test("Truthiness is golden",function(){
+                var val = function(){
+                    var arr  = [1,2,3,4,5];
+                    return arr;
+                };
+                ok($.isArray(val()),
+                        "We're expecting an array as a return value");
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

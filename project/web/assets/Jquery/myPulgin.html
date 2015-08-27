@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>可选参数设置</title>
+    <style>
+        .div1{
+            margin: 0px auto;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            background: #000;
+            position: relative;
+        }
+        .div2{
+            margin: 0px;
+            padding: 0px;
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            top:10px;
+            left:10px;
+        }
+        .div3{
+            margin: 0px;
+            padding: 0px;
+            width: 100px;
+            height: 100px;
+            background: #ffff00;
+            position: absolute;
+            top:10px;
+            left:10px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+
+</head>
+<body>
+    <div class="div1">
+        <div class="div2" id="message">
+            <div class="div3" ></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ;(function($){
+            $.fn.seeMe = function(width ,options){
+                if(typeof options === 'object'){
+                    var comm = $.extend({},options);
+                    alert(comm.wa);
+                }
+                return this.width(width);
+            };
+            $('.div3').on("click",function(){
+               // alert(11);
+                $(this).seeMe(50,{wa:"8888"});
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

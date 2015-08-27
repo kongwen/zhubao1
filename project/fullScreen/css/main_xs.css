@@ -1,0 +1,611 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    -ms-word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-text-size-adjust: 100%;
+    color: #111;
+    background: #fafafa;
+    font-family: Tahoma, 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #666;
+    text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0;
+    background: #e6e6e6;
+    color: #000;
+    padding: 0.2em 1em;
+    z-index: 9999;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/*首页*/
+#nav{
+    background: #000;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 60px;
+    z-index: 10;
+}
+#pages {
+    height: 100%;
+    margin: 0 0 0 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+#cover-pages {
+    background-color: #000;
+    cursor: crosshair;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.wrap {
+    height: 100%;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.page {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/*首页 第一屏*/
+.mapAndBook{
+    height: 100%;
+    background: #f0f0f0;
+}
+#map {
+    height: 100%;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+.mapGrid{
+    position: absolute;
+    z-index: 15;
+    top: 0px;
+}
+.mapStar{
+    height: 60%;
+    position: relative;
+    top: 0px;
+    z-index: 10;
+}
+@keyframes myfirst
+{
+    from {box-shadow: 0px 0px 5px 5px #fccd4d;}
+    to {box-shadow: 0px 0px 16px 8px #f8b500;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    from {box-shadow: 0px 0px 5px 5px #fccd4d;}
+    to {box-shadow: 0px 0px 16px 8px #f8b500;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    from {box-shadow: 0px 0px 5px 5px #fccd4d;}
+    to {box-shadow: 0px 0px 16px 8px #f8b500;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    from {box-shadow: 0px 0px 5px 5px #fccd4d;}
+    to {box-shadow: 0px 0px 16px 8px #f8b500;}
+}
+@keyframes myfirst2
+{
+    from {box-shadow: 0px 0px 5px 5px #85B8EA;}
+    to {box-shadow: 0px 0px 16px 8px #1280E8;}
+}
+
+@-moz-keyframes myfirst2 /* Firefox */
+{
+    from {box-shadow: 0px 0px 5px 5px #85B8EA;}
+    to {box-shadow: 0px 0px 16px 8px #1280E8;}
+}
+
+@-webkit-keyframes myfirst2 /* Safari 和 Chrome */
+{
+    from {box-shadow: 0px 0px 5px 5px #85B8EA;}
+    to {box-shadow: 0px 0px 16px 8px #1280E8;}
+}
+
+@-o-keyframes myfirst2 /* Opera */
+{
+    from {box-shadow: 0px 0px 5px 5px #85B8EA;}
+    to {box-shadow: 0px 0px 16px 8px #1280E8;}
+}
+@keyframes myfirst3
+{
+    from {box-shadow: 0px 0px 5px 5px #EA7EB6;}
+    to {box-shadow: 0px 0px 16px 8px #E83A93;}
+}
+
+@-moz-keyframes myfirst3 /* Firefox */
+{
+    from {box-shadow: 0px 0px 5px 5px #EA7EB6;}
+    to {box-shadow: 0px 0px 16px 8px #E83A93;}
+}
+
+@-webkit-keyframes myfirst3 /* Safari 和 Chrome */
+{
+    from {box-shadow: 0px 0px 5px 5px #EA7EB6;}
+    to {box-shadow: 0px 0px 16px 8px #E83A93;}
+}
+
+@-o-keyframes myfirst3 /* Opera */
+{
+    from {box-shadow: 0px 0px 5px 5px #EA7EB6;}
+    to {box-shadow: 0px 0px 16px 8px #E83A93;}
+}
+@keyframes myfirst4
+{
+    from {box-shadow: 0px 0px 5px 5px #A95CD6;}
+    to {box-shadow: 0px 0px 16px 8px #9126D3;}
+}
+
+@-moz-keyframes myfirst4 /* Firefox */
+{
+    from {box-shadow: 0px 0px 5px 5px #A95CD6;}
+    to {box-shadow: 0px 0px 16px 8px #9126D3;}
+}
+
+@-webkit-keyframes myfirst4 /* Safari 和 Chrome */
+{
+    from {box-shadow: 0px 0px 5px 5px #A95CD6;}
+    to {box-shadow: 0px 0px 16px 8px #9126D3;}
+}
+
+@-o-keyframes myfirst4 /* Opera */
+{
+    from {box-shadow: 0px 0px 5px 5px #A95CD6;}
+    to {box-shadow: 0px 0px 16px 8px #9126D3;}
+}
+.mapStar div[class ^= star]{
+    width: 40px;height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+}
+.mapStar div[class ^= star] i.mm{
+    width: 2px;height: 2px;
+    border-radius: 1px;
+    display: block;
+    margin:19px ;
+}
+.starOrange {
+    top: 10%;
+    left: 10%;
+}
+.starOrange i.mm {
+    background: #FFE7CC;
+    box-shadow: 0px 0px 10px 2px #fccd4d;;
+    animation: myfirst  1.2s linear 0s infinite alternate;
+    -moz-animation: myfirst  1.2s linear 0s infinite alternate;	/* Firefox */
+    -webkit-animation: myfirst  1.2s linear 0s infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: myfirst 1.2s linear 0s infinite alternate;/* Opera */
+}
+.starBlue{
+    top: 80%;
+    left: 43%;
+}
+.starBlue i.mm {
+    background: #C0D6ED;
+    box-shadow: 0px 0px 10px 2px #85B8EA;
+    animation: myfirst2  0.8s linear 1s infinite alternate;
+    -moz-animation: myfirst2  0.8s linear 1s infinite alternate;	/* Firefox */
+    -webkit-animation: myfirst2  0.8s linear 1s infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: myfirst2  0.8s linear 1s infinite alternate;/* Opera */
+}
+.starPink{
+    top: 22%;
+    left: 55%;
+}
+.starPink i.mm {
+    background: #EDBDD6;
+    box-shadow: 0px 0px 10px 2px #EA7EB6;
+    animation: myfirst3  1s linear 0.2s infinite alternate;
+    -moz-animation: myfirst3  1s linear 0.2s infinite alternate;	/* Firefox */
+    -webkit-animation: myfirst3  1s linear 0.2s infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: myfirst3  1s linear 0.2s infinite alternate;/* Opera */
+}
+.starPurple{
+    top: 90%;
+    left: 80%;
+}
+.starPurple i.mm {
+    background: #C5A2D8;
+    box-shadow: 0px 0px 10px 2px #A95CD6;
+    animation: myfirst4  1s linear 0.2s infinite alternate;
+    -moz-animation: myfirst4  1s linear 0.2s infinite alternate;	/* Firefox */
+    -webkit-animation: myfirst4  1s linear 0.2s infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: myfirst4  1s linear 0.2s infinite alternate;/* Opera */
+}
+.mapGrid div[class ^= line]{
+    height: 1px;
+    border-radius: 10px;
+    background: #727272;
+    position: absolute;
+}
+#bookBox{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 30%;
+    left:0;
+    padding-left: 10%;
+    z-index: 5;
+}
+#book{
+    width:60%;
+    height:80%;
+    display: none;
+}
+
+#book .turn-page{
+    background-color:white;
+}
+
+#book .cover{
+    background:#333;
+}
+
+#book .cover h1{
+    color:white;
+    text-align:center;
+    font-size:3em;
+    line-height:9em;
+    margin:0px;
+}
+
+#book .loader{
+    background-image:url(../images/loader.gif);
+    width:24px;
+    height:24px;
+    display:block;
+    position:absolute;
+    top:238px;
+    left:188px;
+}
+
+#book .data{
+    text-align:center;
+    color:#999;
+    line-height:9em;
+}
+#book .odd{
+    background-image:-webkit-linear-gradient(left, #FFF 95%, #ddd 100%);
+    background-image:-moz-linear-gradient(left, #FFF 95%, #ddd 100%);
+    background-image:-o-linear-gradient(left, #FFF 95%, #ddd 100%);
+    background-image:-ms-linear-gradient(left, #FFF 95%, #ddd 100%);
+}
+
+#book .even{
+    background-image:-webkit-linear-gradient(right, #FFF 95%, #ddd 100%);
+    background-image:-moz-linear-gradient(right, #FFF 95%, #ddd 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, #ddd 100%);
+    background-image:-ms-linear-gradient(right, #FFF 95%, #ddd 100%);
+}
+
+#building{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: -30%;
+    left: 20%;
+    z-index: 30;
+    display: none;
+}
+.buildCity{
+    width: 1%;
+    height: 1%;
+    background:url("../images/city.png") 50% bottom  no-repeat ;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 49.5%;
+}
+.pW{
+    padding:20px 40px;height: 100%;
+    box-sizing:border-box;
+    border-left: 1px solid #012638;
+}
+
+.Rw{
+    border-left:none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>mouseover通过trigger触发</title>
+    <style type="text/css">
+        div{
+            padding: 10px;
+            width: 100px;height: 100px;
+        }
+        .div1{
+            background: blue;
+        }
+        .div2{
+            background: #ffff00;
+        }
+        .div3{
+            background: green;
+        }
+        #aDiv{
+            height: 50px;
+            background: #ff0000;
+        }
+        #randomEl{
+            height: 50px;
+            background: #ffff00;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("p").hide();
+            $(".div1",this).mouseover(function(){
+                $(this).find("p").fadeIn().fadeOut();
+            });
+            $(".div2",this).mouseover(function(){
+                $(this).find("p").fadeIn().fadeOut();
+            });
+            $(".div3",this).mouseover(function(){
+                $(this).find("p").fadeIn().fadeOut();
+            });
+            $("input").click(function(){
+                $("div").trigger("mouseover");
+            });
+
+            $("#aDiv").on("click",'a',function(){
+                console.log("Handler 1");
+            }).css("color","#fff");
+            $('#randomEl').data("year","1999");
+            alert($('#randomEl').data("year"));
+
+        });
+    </script>
+</head>
+<body>
+        <div class="div1"><p>Here</p></div>
+        <div class="div2"><p>Here</p></div>
+        <div class="div3"><p>Here</p></div>
+        <input type="button" value="run with trigger"/>
+        <div id="aDiv"><a>Here</a><br/>nihao</div>
+        <div id="randomEl"></div>
+</body>
+</html>

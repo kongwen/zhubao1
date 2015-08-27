@@ -1,0 +1,10 @@
+<div id="canvasUsageCon"><canvas id="canvasUsage" width="1024px" height="510px" rel="data" rels="leftYData" ></canvas></div>
+
+<script>
+ getDataThen(getUrl('usage'), function(data){
+	 if($("#canvasUsage").size()>0){
+		drawUsage(options,"canvasUsage",data);//绘制主曲线图
+	}
+			changeTitle("Data(MB User Day)-Three Month Trend ");
+        }, 'Usage');
+</script>

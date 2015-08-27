@@ -1,0 +1,11 @@
+<div class="leftFU">Inbound/Outbound</div>
+<div id="canvasUserCon"><canvas id="canvasUser" width="980px" height="510px" rel="Total" ></canvas></div>
+<div class="rightFU">All Users</div>
+<script>
+changeTitle("Number of Users(All) - Three Month Trend ");
+ getDataThen(getUrl('users'), function(data){
+	if($("#canvasUser").size()>0){
+      drawUser(options,"canvasUser",data,color);//绘制主曲线图
+	 }
+}, 'User')
+</script>

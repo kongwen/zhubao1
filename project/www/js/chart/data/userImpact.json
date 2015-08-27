@@ -1,0 +1,25 @@
+var REPORTJSON = {
+	"voiceToActivtion":{
+		"leftY":["Voice","SMS","Browsing","Roaming","Top_up","Activtion"],
+		"bottomXMax":4000000,
+		"number":{
+			  "Voice":[1496224,1497000,160],
+			  "SMS":[1484337,1484350,130],
+			  "Browsing":[3813277,3814000,254],
+			  "Roaming":[351420,335025,153],
+			  "Top_up":[1567,1660,35],
+			  "Activition":[1225,1200,22]
+            }
+	},
+	"youtubeToGoogle":{
+			"leftY":["Youtube","BBC News","WhatsApp","Facebook","Google"],
+			"bottomXMax":800000,
+			"number":{
+						"Youtube":[225176,225200,90],
+						"BBC News":[205716,205700,80],
+						"WhatsApp":[116257,116300,52],
+						"Facebook":[585575,585000,63],
+						"Google":[754857,555800,122]
+			}
+	}
+}

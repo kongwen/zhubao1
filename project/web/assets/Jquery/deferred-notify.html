@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Deferred-notify</title>
+    <style>
+        #notifier{
+            width:500px;height:500px;
+            margin: 0 auto;
+            /*background: #2365cc;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="notifier" ></div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+
+        ;(function($){
+            var longRunning = function(){
+              return $.Deferred(function(dfd){
+                  dfd.notify("operation started");
+                  console.log(dfd.state);
+                  var callback = function(){
+                      dfd.notify("operation finished");
+                      dfd.resolve();
+                  };
+                  setTimeout(callback,5000);
+              }).promise();
+            };
+            longRunning().progress(function(notification){
+                console.log(this.state);
+                $("#notifier")
+                        .text(notification)
+                        .fadeIn(5000);
+            }).done(function(){
+                console.log(this.state);
+                $("#notifier").css({
+                    "color":"green",
+                    "font-weight":"bold"
+                });
+            });
+
+        })(jQuery);
+    </script>
+</body>
+</html>

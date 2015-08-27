@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>qunit-dom</title>
+    <link rel="stylesheet" href="js/qunit/qunit-1.18.0.css"/>
+</head>
+<body>
+    <h1 id="qunit-header">QUnit example</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">
+        <div id="dom-test" style="display: none;"></div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        ;(function($){
+            test("DOM",function(){
+                expect(3);
+                $test = $("#dom-test");
+                $test
+                .css("width","200px")
+                .text("Testing the DOM").show();
+                equal($test.css("width"),"200px","200px!");
+                equal($test.text(),"Testing the DOM","We're testing the DOM");
+                equal($test.css("display"),"block","display: block;")
+            });
+            test("No Try-Catch",function(){
+                var test =  $$(this).isGonnaExplode();
+                equal(test,"Return Value of Doom","We're looking for a cool return value")
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

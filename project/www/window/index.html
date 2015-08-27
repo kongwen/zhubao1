@@ -1,0 +1,79 @@
+
+<div class="topHeader">
+    <div id="exitApp" class="exitApp">exit</div>
+    <div id="noticeIndex" class="notice"></div>
+
+    <div id="messageconIndex" class="messagecon">
+        <dl>
+            <dt>Recent Activities</dt>
+        </dl>
+        <span id="upHideIndex" class="upHide"></span>
+    </div>
+    <script>
+        getMessage("Index", '/js/chart/data/message.json');
+    </script>
+
+    <div id="header">
+        <div class="top" style="background: #000;">
+            <div class="logo"></div>
+            <div class="logo-text"></div>
+
+        </div>
+    </div>
+    <!-- /header -->
+
+</div>
+
+<div class='popDIv' ></div>
+<div class="content index" id="content" style="height:65.7em">
+
+
+<div class="twoCOl" index='0'>
+<div></div>	
+</div>
+
+
+
+ <div class="oneCOl" index='0' >
+	<div></div>	
+</div>
+ 
+<div class="twoCOl" index='1' >
+	<div></div>
+</div>
+
+<div class="oneCOl"  index='1' >
+<div></div>	
+</div>
+
+<div class="twoCOl"  index='2' >
+<div></div>	
+</div>
+
+<div class="oneCOl" index='2' >
+<div></div>	
+</div>
+
+
+	
+	
+</div>
+
+
+<div  id="config" ></div>
+
+<script src="../js/framework/page.js"></script>
+<script src="../js/chart/canvas.index.js"></script>
+<script>
+    $.page();
+    var HOMEDATA;
+    getDataThen(getUrl('index'), function (data){
+        HOMEDATA = data;
+        iniINDEX();
+        setRightTime();
+        bindLink();
+        $("#loading").hide();
+    }, 'Home');
+    $("#map-canvas").css("z-index","999");
+    $("#leftCon").hide();
+</script>

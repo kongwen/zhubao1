@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-dragAndDrop</title>
+</head>
+<body>
+
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc"
+    });
+
+    var rectangle = canvas.display.rectangle({
+        x: 77,
+        y: 100,
+        width: 200,
+        height: 100,
+        fill: "#000"
+    });
+    var rectangle1 = canvas.display.rectangle({
+        x: 177,
+        y: 150,
+        width: 200,
+        height: 100,
+        fill: "#fff"
+    });
+    var square = canvas.display.rectangle({
+        x: 10,
+        y: 10,
+        width: 50,
+        height: 50,
+        fill: "#0ff"
+    });
+
+    canvas.addChild(rectangle);
+    canvas.addChild(rectangle1);
+    rectangle.addChild(square);
+    rectangle.dragAndDrop({
+        start: function () {
+            this.fill = "#ff0";
+        },
+        move: function () {
+            this.fill = "#0f0";
+        },
+        end: function () {
+            this.fill = "#f00";
+        },
+        changeZindex:true,
+        bubble:false
+    });
+    rectangle1.bind("click",function(){
+        rectangle.dragAndDrop(false );
+    });
+</script>
+</body>
+</html>

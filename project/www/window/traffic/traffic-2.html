@@ -1,0 +1,14 @@
+ <div id="traSwip">
+ <canvas id="canvasTraffic" width="1024px" height="280" ></canvas>
+ </div>
+
+ <canvas id="canvasTrafficLine" width="1024px" height="200" style="border-top:1px solid #252525;margin-top:-10px;padding-top:8px;"></canvas>
+
+<script>
+	  changeTitle("Mobile Broadband Traffic Distribution - Three Month Trend ");
+	  getDataThen(getUrl('traffic'), function(data){
+			if($("#canvasTraffic").size()>0){
+				drawTraffic(options,"canvasTraffic",data);
+			}
+      }, 'Traffic');
+</script>

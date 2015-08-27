@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-line</title>
+</head>
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc"
+    });
+    var line = canvas.display.line({
+        start: {x:80, y: 90 },
+        end: {x:200,y: 90 },
+        //x:80,
+        //radius:100,
+        stroke: "20px #0aa",
+        cap: "round"
+    });
+
+    canvas.addChild(line);
+
+    canvas.setLoop(function () {
+        line.length = Math.floor(line.length) - 2;
+        if (line.length <= 2) {
+            line.x = 10;
+            console.log(line.length ,line.radius,line.x);
+            canvas.timeline.stop();
+        }
+    });
+
+    line.bind("click tap", function () {
+        console.log(line.length ,line.radius,line.x);
+        canvas.timeline.start();
+    });
+</script>
+</body>
+</html>

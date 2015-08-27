@@ -1,0 +1,21 @@
+<div rel="impact.html"  type="impact1" >
+        <h1>USER IMPACT</h1>
+
+        <div class="indexImpact">
+
+            <ul class="impactNote">
+                <li class="title">Impacted Users</li>
+                <li><span class="min"></span> < Baseline</li>
+                <li><span class="max"></span> > Baseline</li>
+                <li><span></span> Baseline</li>
+            </ul>
+
+            <canvas id="indexcanvasUserImpact2" width="320px" height="480"></canvas>
+           <script>
+			var impact = HOMEDATA["home1To7"]["userImpact"];
+			if(impact){
+				indexDrawImpact(impact,"indexcanvasUserImpact2","min");
+			}
+		</script>
+        </div>
+    </div>

@@ -1,0 +1,219 @@
+/* 尼日尼亚 黄色基调 */
+html, body{
+    background: #f3f3f3;
+}
+#top,.footer{
+    color: #666;
+}
+.header,.mainbav {
+    background: none;
+    border-bottom:none;
+}
+.mainbav {
+    background: #fff;
+    border-bottom:1px solid #fadb57;
+}
+.subnav {
+    margin-top: 15px;
+}
+.logo {
+    background: url("../images_ni/logo.png") no-repeat top;
+    display: inline-block;
+    height: 60px;
+    width: 70px;
+    margin-top: 12px;
+}
+.subnav ul li,.subnav ul li.l{
+    background:#fadb57 ;
+}
+.subnav ul li:nth-child(1) {
+    background:#fadb57;
+}
+.subnav ul li.selected-m,.subnav ul li.selected-l,.subnav ul li.selected-r{
+    background: #fec82f  !important;
+}
+.subnav ul li.line{
+    border-left: 1px solid #fec82f;
+    border-right: 1px solid #fec82f;
+}
+.logo-title {
+    margin-left: 27px;
+    background: url("../images_ni/vas.png") no-repeat top;
+    margin-top: 24px;
+}
+.redirect{
+    background: #fadb57;
+    color: #0f5c7a;
+}
+.color-d7d7d5,.color-d7d7d5 a{
+    color: #0f5c7a;
+}
+
+#top-user-info .line{
+    background-color:#888;
+}
+.opop {
+    background: url('../images_ni/opop.png') no-repeat top;
+}
+.main{
+    border: 1px solid #d2d2d2;
+}
+.contact,#packagePage .package-content,.onebox-msg{
+    border-left: 1px solid #d2d2d2;
+}
+.service-t,.contact-header,.package-item ul,.send-msg,
+.messageFileList-item, .vmsMessageList-item,.messageFile-header{
+    border-bottom: 1px solid #d2d2d2;
+}
+.folder ul li.titleS, .capacity ul li.titleS2,
+#messageFolder ul .titleS,#lssPage .capacity ul{
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+.folder ul li{
+    border-bottom: 1px dashed #d2d2d2;
+}
+.package-item ul li{
+    border-top: 1px dashed #d2d2d2;
+}
+.services-item-content .note-l,.services-item-content .note,
+.package-subContent{
+    background: #fefaf0;
+}
+.package-bgN {
+    background: none;
+}
+.package-item ul li.selectedL,.folder ul li.selectedli2{
+    background: #fefaf0;
+}
+.bg-ico-package {
+    background: url('../images_ni/package/onebox.png') no-repeat top;
+}
+.button-s-operate-et-save,.button-subscribe-et {
+    background: url("../images_ni/service/save1.png") no-repeat;
+}
+.services-setting .s-title{
+    background: #fede8e;
+}
+.product-activation-success{
+    background: #fddf8a;
+    height: 23px;
+}
+.button-from-ok, .button-from-ok span,.button-form,.button-form span{
+    background:url('../images_ni/button.png') no-repeat;
+}
+.button-form, .button-from-ok{
+    background-position: 0px -1257px;
+}
+.button-form span,.button-from-ok span{
+    background-position: right -1289px;
+}
+.res-bg-img-default-box {
+    background: url(../images_ni/oneboxandlss/image.png) no-repeat;
+}
+.titleP span,.resShare-item .title{
+    color: #666;
+}
+#top #redirect>a.redirect{
+    margin-right:0px;
+}
+
+/* 将html的style移出来，新增 class*/
+.lssPage-header{
+    background: #ededed;
+    background: -webkit-gradient(linear,center top,center bottom,from(#f6f6f6),to(#ededed));
+    background:-moz-linear-gradient(top, #f6f6f6, #ededed);
+    border-bottom:1px solid #d2d2d2;
+}
+#lssPage .msg-itemTd{
+    border-bottom: 1px solid #d2d2d2;
+    padding-left: 10px;
+}
+
+/* 新增 cos业务页面*/
+#cosServiceSetting .cosSer-box{
+    padding-bottom: 10px;
+    display: none;
+}
+.cosSer-box .butDiv{
+    width:90%;
+    padding: 2px 0px;
+    text-align: right;
+    margin:0px auto;
+    overflow: hidden;
+}
+.cosSer-box-h3 h3.h3{
+    width:90%;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px 20px;
+    margin:0px auto 10px;
+    background: url('../images_ni/addgroup.png') 0px 14px no-repeat;
+    cursor: default;
+    border-bottom: 1px dashed #e6e6e6;
+    overflow: hidden;
+}
+.cosSer-box-h3 h3.h3 .spa{
+    font-size: 16px;
+}
+.cosSer-box-h3 h3.openH3{
+    background-position:0px -29px;
+}
+.cosSer-box .submitButDiv{
+    padding-top: 20px;
+}
+.cosServiceSetting .cosSer-box .checkBoxList{
+    width:86.8%;
+    max-height: 160px;
+    padding: 10px 0px 10px 20px;
+    margin:0px auto;
+    border: 2px solid #e6e6e6;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.cosServiceSetting .checkBoxList >ul{
+    width: 100%;
+    overflow:hidden;
+}
+.checkBoxList li{
+    width:33.3333333%;
+    height:40px;
+    line-height:40px;
+    float: left;
+    overflow: hidden;
+}
+.checkBoxList .insteadC,.checkBoxList li span{
+    float: left;
+}
+.checkBoxList .insteadC{
+    margin: 12px 5px 0px 0px;
+}
+.checkBoxList li span{
+    width: 80%;
+    cursor: default;
+    overflow: hidden;
+}
+.checkBoxList li input[type=checkbox]{
+   display: none;
+}
+/* 弹窗风格 */
+.pop-div-top .inner,.pop-div-top, .pop-div-top-2{
+    background: url(../images_ni/hh1.png) 0px -2px repeat-x;
+}
+.pop-div-top, .pop-div-top-2{
+    min-width: 531px;
+    margin-left: 1px;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 5px 5px 0px 0px;
+}
+.pop-div .pop-div-top .inner{
+    /* color:#fff; */
+    border-radius: 0px 5px 0px 0px;
+    padding-left: 2px;
+}
+.buttonsLine .save-signature{
+    background: url(../images_ni/hh1.png) repeat;
+}
+/*  .pop-div-top-close{
+ 	background: url(../images_ni/delete.png) no-repeat;
+ } */

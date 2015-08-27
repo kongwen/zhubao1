@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>input时事监听</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .bi{width:200px;margin:50px auto 0px;}
+        p{height: 20px;background-color: #2365cc;}
+    </style>
+</head>
+<body>
+    <div class="bi">
+        <input type="text"/>
+        <div id="inputs"></div>
+    </div>
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript">
+
+        $('input').bind('input propertychange', function() {
+            // 密码检验
+            var $v = $(this).val();
+            $("#inputs").html($v);
+        });
+    </script>
+</body>
+</html>

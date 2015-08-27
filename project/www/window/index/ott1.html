@@ -1,0 +1,14 @@
+	<div rel="ott.html"  type="ott1">
+        <h1>OTT INSIGHT</h1>
+	    
+        <div class="indexOTT2">
+			<span class="ottTitle"> OTT service Throughput Distribution-<em id="ottTitle" >Speed Test</em></span>
+            <canvas id="indexcanvasOTTRight" width="340px" height="200" ></canvas>
+        </div>
+		<script>
+			var ottData = HOMEDATA["home8OttInsight"];
+			if(ottData){
+				indexDrawOTT(ottData, "indexcanvasOTTRight",'1',"#ottTitle");
+			}
+		</script>
+    </div>

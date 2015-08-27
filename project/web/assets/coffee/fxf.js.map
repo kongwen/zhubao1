@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "fxf.js",
+  "sourceRoot": "",
+  "sources": [
+    "fxf.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA;AAAA"
+}

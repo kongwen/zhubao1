@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap基础模板-弹窗</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="vendor/html5shiv.min.js"></script>
+    <script src="vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="alert">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Warning!
+    </strong> Best check yo self, you're not looking too good.
+</div>
+<div class="alert alert-warning alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" ariahidden="true">×</button>
+    <strong>Warning!</strong>
+    <p>Best check yo self, you're not looking too good.</p>
+    <a href="#" class="alert-link">look at me!!</a>
+</div>
+<div class="progress progress-striped">
+    <div class="progress-bar progress-bar-info" style="width: 20%">
+    </div>
+</div>
+<div class="progress progress-striped">
+    <div class="progress-bar progress-bar-success" style="width: 40%">
+    </div>
+</div>
+<div class="progress progress-striped">
+    <div class="progress-bar progress-bar-warning" style="width: 60%">
+    </div>
+</div>
+<div class="progress progress-striped">
+    <div class="progress-bar progress-bar-danger" style="width: 80%">
+    </div>
+</div>
+<div class="progress progress-striped active">
+    <div class="progress-bar" style="width: 45%"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" style="width: 35%">
+    </div>
+    <div class="progress-bar progress-bar-warning" style="width: 20%">
+    </div>
+    <div class="progress-bar progress-bar-danger" style="width: 10%">
+    </div>
+</div>
+<div class="media">
+    <a class="pull-left" href="#">
+        <img class="media-object" src="../../static/img/tu/1.jpg" />
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">Media heading</h4>
+        嵌套的media对象嵌套的media对象嵌套的media对象嵌套的media对象
+        <!-- 嵌套的media对象 -->
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object" src="../../static/img/tu/1.jpg" />
+            </a>
+            <div class="media-body">嵌套的media对象嵌套的media对象嵌套的media对象嵌套的media对象</div>
+        </div>
+    </div>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-success  ">JavaScript编程精解<span class="badge">1</span></a>
+    <a href="#" class="list-group-item list-group-item-info ">JavaScript设计模式 <span class="badge">2</span></a>
+    <a href="#" class="list-group-item active">JavaScript启示录 <span class="badge">3</span> </a>
+    <a href="#" class="list-group-item">当前你正在读的书<span class="badge">4</span></a>
+    <a href="#" class="list-group-item">正在构思的书<span class="badge">5</span></a>
+</div>
+<div class="panel panel-success">
+    <!-- 默认面板 -->
+    <div class="panel-heading">汤姆大叔的书目</div>
+    <p>
+        <br />以下列表是汤姆大叔在2012、 2013年所出版的图书， 敬请大家阅读， 多提建议。
+        <br /><br />
+    </p>
+    <!-- 列表组 -->
+    <ul class="list-group ">
+        <li class="list-group-item">JavaScript编程精解</li>
+        <li class="list-group-item">JavaScript设计模式</li>
+        <li class="list-group-item">JavaScript启示录</li>
+        <li class="list-group-item">您正在读的本书</li>
+        <li class="list-group-item">正在构思的书</li>
+    </ul>
+</div>
+<div class="well">
+    <p>Some default panel. </p>
+    <blockquote>注意， 这里是引用内容！ </blockquote>
+</div>
+<button data-toggle="modal" data-target="#egPop" class="btn">点我，出弹窗。。。。</button>
+<div class="modal"id="egPop">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" datadismiss="modal"
+                        aria-hidden="true">×</button>
+                <h4 class="modal-title">Modal标题</h4>
+            </div>
+            <div class="modal-body">
+                <p>这里是弹窗里的具体内容………</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-
+                        dismiss="modal">
+                    关闭</button>
+                <button type="button" class="btn btn-primary">保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <nav class="navbar navbar-default navbar-fixedtop" role="navigation" id="selector">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#fat">@fat</a></li><!-- 第1个链
+接 -->
+            <li class=""><a href="#mdo">@mdo</a></li><!-- 第2个链接 -->
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href=
+                        "#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class=""><a href="#one">one</a></li><!-- 第3个链
+接 -->
+                    <li class=""><a href="#two">two</a></li><!-- 第4个链
+接 -->
+                    <li class="divider"></li>
+                    <li class=""><a href="#three">three</a></li><!-- 第5
+个链接 -->
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+<!—滚动侦测区域 -->
+<div id="gunDong" data-offset="0"  data-spy="scroll" style="position: relative;height:150px;overflow: auto">
+    <h4 id="fat">@fat</h4><p style="height:150px;">具体内容</p><p style="height:150px;">具体内容</p><p>fatfatfat</p>
+    <h4 id="mdo">@mdo</h4><p style="height:150px;">具体内容</p><p style="height:150px;">具体内容</p><p>mdomdomdomdo</p>
+    <h4 id="one">one</h4><p style="height:150px;">具体内容</p><p style="height:150px;">具体内容</p><p>oneoneoneone</p>
+    <h4 id="two">two</h4><p style="height:150px;">具体内容</p><p style="height:150px;">具体内容</p><p>twotwotwotwotwo</p>
+    <h4 id="three">three</h4><p style="height:150px;">具体内容</p><p style="height:150px;">具体内容</p><p>threethreethreethree</p>
+</div>
+<br/><br/><br/>
+<a href="#" data-toggle="tooltip" data-original-title="这里是提示语的内容">
+    链接</a>
+<a href="#" data-toggle="tooltip" title="设置title也可以">链接</a>
+<button data-original-title="Tooltip on left"  data-container="body" class="btn btn-default"
+        data-toggle="tooltip" data-placement="left">左侧Tooltip</button>
+<button data-original-title="Tooltip on top"   data-container="body" class="btn "
+        data-toggle="tooltip" data-placement="top">上方Tooltip</button>
+<button data-original-title="Tooltip on bottom" class="btn "
+        data-toggle="tooltip" data-placement="bottom">下方Tooltip</button>
+<button data-original-title="Tooltip on right" class="btn "
+        data-toggle="tooltip" data-placement="right">右侧Tooltip</button>
+<div  id="ddd" >
+    <button  class="btn disabled" >右侧Tooltip</button></div>
+<br/><br/><br/>
+<a data-toggle="popover"
+   data-original-title="A Title" title=""
+   data-content="And here's some amazing content. It's very engaging. right?"
+   class="btn btn-lg btn-danger" >单击反转弹出框
+</a>
+<br/><br/><br/>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    //滚动检测
+    $('#gunDong').scrollspy({ target: '#selector' });
+    //提示框
+    $('#ddd').tooltip({
+        html:true,
+        title: "<div>提示语内容</div><div>提示语内容</div>",
+        placement: 'top'
+    });
+    $('#ddd').on('show.bs.tooltip', function () {
+       // $(this).attr({"data-original-title":'5555555555'});
+    })
+    $('[data-toggle=popover]').popover();
+    $(document).off('.alert.data-api');
+    $(document).on('click.bs.alert.data-api', '[data-dismiss="alert"]',$.fn.alert.Constructor.prototype.close)
+</script>
+</body>
+</html>

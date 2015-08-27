@@ -1,0 +1,30 @@
+ <div class="satHiddenCon">
+ <div class="Satcon">
+ 
+ <span class="satIcon" id="satUp" ></span>
+ <div class="areaLeft">
+	<dl class="Satisfied">
+		<dt>Satisfied Areas</dt>
+	</dl>
+	
+	<dl class="Marginal">
+		<dt>Marginal Areas</dt>
+	</dl>
+	
+	<dl class="Dissatisfied">
+		<dt>Dissatisfied Areas</dt>
+	</dl>
+ </div>
+ <canvas  id="canvasTrafficTrend3" width="1024px" height="530"  rel="keyArea" ></canvas>
+ </div>
+ </div>
+ <script src="../js/chart/canvas.Sat.js"></script>
+<script>
+ getDataThen(getUrl('sat'), function(data){
+ 	if($("#canvasTrafficTrend3").size()>0){
+		drawSat(options,"canvasTrafficTrend3",data);
+	}
+	changeTitle("Satisfaction Level(Key Areas)-7Day Trend ");
+	bindSat();
+ }, 'Sat');
+</script>

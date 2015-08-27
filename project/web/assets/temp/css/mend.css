@@ -1,0 +1,19 @@
+/* 浮动布局 */
+.subnav ul li
+{
+	float:left;
+}
+/* color */
+.subnav ul li a
+{
+	color: #012638;
+}
+.subnav ul li.f a
+{
+	color:white;
+}
+/* text-s */
+.subnav ul li.f a
+{
+	text-shadow: 0 1px 1px #4287AE;
+}

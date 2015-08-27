@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas Demo</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery.1.9.1.js"></script>
+    <script src="js/jquery.mobile/jquery.mobile-1.4.0.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+<body style="background: #232528;">
+<div data-role="page" class="page-in" data-dom-cache="true" >
+    <div role="main" class="content">
+        <div class="login">
+            <div class="put logo"></div>
+            <div class="put not" style="color:#EE8923;"></div>
+            <div class="put users"><div class="icon"></div><input type="text" name="textfield" value="User Name" onclick="if(value==defaultValue){value='';this.style.color='#999'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999"/></div>
+            <div class="put password"><div class="icon"></div><input id="pass" type="password" name="textfield" value="" onclick="if(value==defaultValue){value='';this.style.color='#999'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999"/></div>
+            <div class="put check" ><input type="checkbox" checked style="left:-19em;top:0;"/><div style="margin-left:3em;line-height:2.5em;font-size:1.2em">Remenber user name</div></div>
+            <div class="put btn" ><div class="ip">IP</div><input id="ip" type="text" /> <div class="logins" >Login</div></div>
+        </div>
+
+    </div><!-- /content -->
+
+</div><!-- /page -->
+
+<script>
+    var regStr = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/ig;
+    $(".logins").tap(function(){
+        if(regStr.test($('#ip').val())){
+            window.location.href="index.html";
+        }else{
+            $('.not').html("Please input valid user name and password");
+        }
+    });
+    var passNotice = $("<div style='height:30px;position: absolute;color:#999;font-size:1.5em'>Password</div>").appendTo($('body'));
+    var passofst = $("#pass").offset();
+    passNotice.css({top:passofst.top,left:passofst.left});
+
+    $("#ip").hide();
+    $(".ip").tap(function(){
+        $("#ip").show();
+    });
+
+    $("#pass").focus(function(){
+        passNotice.remove();
+    })
+
+</script>
+
+</body>
+</html>

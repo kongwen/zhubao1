@@ -1,0 +1,17 @@
+ <div rel="sat.html"  type="sat2">
+        <h1>SATISFACTION LEVEL</h1>
+
+        <div>
+            <canvas id="indexsatMinAll" width="200px" height="180px"></canvas>
+            <canvas id="indexsatMinVip" width="200px" height="180px"></canvas>
+            <canvas id="indexsatMinKey" width="200px" height="180px"></canvas>
+        </div>
+		<script>
+			var sat = HOMEDATA["home1To7"]["satisfactionLevel"];
+			if(sat){
+				indexDrawSat(sat, "indexsatMinAll", "#d18005", "AllUsers", "All Users");
+				indexDrawSat(sat, "indexsatMinVip", "#429230", "VIP", "VIPs");
+				indexDrawSat(sat, "indexsatMinKey", "#ab2d15", "KeyArea", "Key Areas");
+			}
+		</script>
+    </div>

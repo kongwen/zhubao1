@@ -1,0 +1,19 @@
+<div style="width:990px;height:510px;overflow:hidden;position:relative;top:0em;" id="riskCon" >
+<div class="riskVertical">Users</div>
+<canvas id="canvasRISKConsumptionfixed" width="2000px" height="510px" style="position:absolute;top:0;left:2.4em;z-index:8;" ></canvas>
+<div style="width:960px;margin-left:99px;position:absolute;top:30px;z-index:10;overflow:hidden;">
+<canvas id="canvasRISKConsumption" width="2000px" height="510px" style="margin-top:-30px;" ></canvas>
+</div>
+</div>
+</div>
+<script>
+ getDataThen(getUrl('risk'), function(data){
+	if($("#canvasRISKConsumption").size()>0){
+	  var Consumption = data["dataConsumption"];
+      drawRISKConsumption(optionsTop,"canvasRISKConsumption",Consumption);//绘制主曲线图
+	}
+      var date = data["dataConsumption"]["statDateRange"];
+	  $("#title b").text("("+date+")");
+	  changeTitle("Data Consumption Analysis ");
+}, 'RISK');
+</script>

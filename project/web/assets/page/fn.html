@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>fn传值</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 14px;
+            background: #fff;
+            color: #646464;
+        }
+        #fnLx,#fnLm,#one{
+            width: 500px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body >
+    <header>瀑布流随意排布图片</header>
+    <section>
+        <div id="one"><p style="height: 20px;width: 50px;">点我</p></div>
+        <div id="fnLx"></div>
+        <div id="fnLm"></div>
+    </section>
+    <script src="../static/vendor/jquery/jquery-2.1.1.js"></script>
+    <script src="../static/js/fn.js"></script>
+    <script >
+        var p = {
+            a:6,b:"a"
+        }
+        $("#one").one("click", function(){
+            alert( $(this).html() );
+        });
+      //  $('#fnLx').adSd(p).css({height:"300px",width:"300px",background:"#000"});
+        $('#fnLx').adSd({pageLinkFun:function(page){
+           // alert(page);
+        }},p).css({height:"180px",width:"300px",background:"#000"});
+        $('#fnLm').adSd({},p).css({height:"180px",background:"#000"});
+
+        //callee可以打印其本身
+ /*       var date = {a1:"1111",a2:"2222",a3:"3333"};
+        function calleeDemo(date) {
+            alert(date.a1);
+         }
+
+        calleeDemo(date);*/
+        function nameSpaceFiler ( type, list ) {
+            var type = type.split(':');
+            var namespace;
+            if ( type.length === 1 ) {
+                type = type[0];
+                if ( !list[type] ) {
+                    if ( type.match('Ready') ) {
+                        debug && console.log( 'regist ready', type );
+                        list[ type ] = $.Callbacks ();
+                    } else {
+                        debug && console.log( 'regist memory', type );
+                        list[ type ] = $.Callbacks ( "memory" );
+                    }
+                }
+                return list[type];
+            } else {
+                if ( !list[type[0]] ){
+                    list[type[0]] = {};
+                }
+                namespace = list[type[0]];
+                if ( !namespace[type[1]]){
+                    if ( type[1].match('Ready') ) {
+                        debug && console.log( 'regist ready', type );
+                        namespace[ type[1] ] = $.Callbacks ();
+                    } else {
+                        debug && console.log( 'regist memory', type );
+                        namespace[ type[1] ] = $.Callbacks ( "memory" );
+                    }
+                }
+                return namespace[type[1]];
+            }
+        }
+        console.log(nameSpaceFiler ( "mm:tt", [] ) )
+    </script>
+</body>
+</html>

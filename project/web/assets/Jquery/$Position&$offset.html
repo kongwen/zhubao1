@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>$Position&$offset</title>
+    <style>
+        .div1{
+            margin: 0px auto;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            background: #000;
+            position: relative;
+        }
+        .div2{
+            margin: 0px;
+            padding: 0px;
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            top:10px;
+            left:10px;
+        }
+        .div3{
+            margin: 0px;
+            padding: 0px;
+            width: 100px;
+            height: 100px;
+            background: #ffff00;
+            position: absolute;
+            top:10px;
+            left:10px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.div2').offset({
+                top:50
+            });
+            console.log($('.div2').offset().top);
+            console.log($('.div2').position().top);
+            $('#message').on('click',function(e){
+                e.stopPropagation();
+                $(this).slideUp();
+            });
+            $('.div3').on('click',function(e){
+                e.stopPropagation();
+                //$(this).hide();
+            });
+            $(document).on('click',function(){
+                $('#message').slideDown();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2" id="message">
+            <div class="div3" ></div>
+        </div>
+    </div>
+</body>
+</html>

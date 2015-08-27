@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM节点层次</title>
+    <style>
+        body{
+            width: 1000px;margin: 0px auto;
+        }
+        div{
+            padding: 10px 0px;
+        }
+        [id *=dom ]{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="attrCount" name="abc"></div>
+<div >window.document.nodeType :<span id="dom1"></span></div>
+<div >document.title:<span id="dom2"></span></div>
+<div >url:<span id="dom3"></span></div>
+<div >domain:<span id="dom4"></span></div>
+<div dir="rtl">referrer:<span id="dom5"></span></div>
+<div >outputAttributes:<span id="dom6"></span></div>
+
+<script>
+    (function(){
+        var dom = [];
+        for(var i = 0;i< 100;i++){
+            dom[i] = document.getElementById("dom" + (i+1));
+        }
+
+        dom[0].innerText = window.document.nodeType;
+        dom[1].innerText = document.title;
+        dom[2].innerText = document.URL;
+        dom[3].innerText = document.domain;
+        dom[4].innerText = document.referrer;
+        dom[0].attributes["id"].nodeValue = "someOtherId";
+
+        function outputAttributes(element){
+            var pairs = new Array(),
+                attrName,attrValue, i,len;
+            console.log(element.attributes.length);
+            for(i = 0,len = element.attributes.length;i<len;i++){
+                attrName = element.attributes[i].nodeName;
+                attrValue = element.attributes[i].nodeValue;
+                    if(element.attributes[i].specified){//为了兼容IE7
+                        pairs.push(attrName + "=\"" + attrValue + "\"");
+                    }
+                }
+            return pairs.join(" ");
+        }
+        dom[5].innerText = (outputAttributes(document.getElementById('attrCount')));
+    })();
+</script>
+</body>
+</html>

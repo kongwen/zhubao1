@@ -1,0 +1,31 @@
+<ul class="ottNote">
+	<li><span  class="icon1"></span> NO.of Transactions</li>
+	<li><span  class="icon2"></span> Streaming - Rate Not OK</li>
+	<li><span  class="icon3"></span> Streaming - Rate OK</li>
+	<li><span  class="icon4"></span> Browsing </li>
+	<li><span  class="icon5"></span> Others</li>
+</ul>
+
+<ul class="OttTabTitle" id="OttTabTitle">
+	<li class="active" rel="2G" >2G</li>
+	<li rel="3G" >3G</li>
+	<li rel="LTE" >LTE</li>
+</ul>
+
+<div class="tabContent">
+	<div id="ottDetail"></div>
+	<canvas id="canvasOTTOverAll" width="1024px" height="470px" ></canvas>
+</div>
+
+<script>
+
+ getDataThen(getUrl('ott'), function(data){
+	  if($("#canvasOTTOverAll").size()>0){
+		 var overall = data["overallThroughput"];
+		 drawOTTOutPutPie(optionsPie,"canvasOTTOverAll",overall,"2G");//绘制主曲线图
+		 OTTPUTBindChange(data);
+	  }
+	  changeTitle("Overall Throughput Distribution ");
+	  setTitleOneDate();
+}, 'OTT');
+</script>

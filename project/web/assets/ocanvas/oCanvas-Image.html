@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-Image</title>
+</head>
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc",
+        fps: 60
+    });
+    var image = canvas.display.image({
+        x: 250,
+        y: 250,
+        origin: { x: "center", y: "center" },
+        image: "../static/img/tu/1.jpg",
+        tile: true,
+        tile_width: 55,
+        tile_height: 70.6,
+        tile_spacing_x: 5,
+        tile_spacing_y: 10,
+        width: 300,
+        height: 385
+    });
+
+    canvas.addChild(image);
+</script>
+</body>
+</html>

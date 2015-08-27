@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>extend 合并多个函数示例</title>
+    <style type="text/css">
+        #animation{
+            width: 200px;height: 200px;
+            background: #ccc;
+        }
+    </style>
+    <script  type="text/javascript" src="./js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        var obj1 = {"q1":"proterty 1"};
+        var obj2 = {"q2":"proterty 2"};
+        //var obj3 = {"q3":"proterty 3"};
+        $.extend(obj1,obj2);
+        var moreObj = {"q1":"q123456","q2":"q123456","q3":{"w1":"w123456","w2":"w123456"}}
+        var coiObj = $.extend({},moreObj);
+        coiObj.q1 = "heheheheh";
+        console.log(moreObj);
+        console.log(coiObj);
+        var arr =[1,2,"q2","q123456",2,55];
+        console.log(arr);
+        console.log($.inArray(2,arr));
+        //console.log($.unique(arr)); $.unique()只能处理dom数组，不能处理字符串和数值数组
+        $(document).ready(function(){
+            //$('#animation').dequeue();
+            $('#animation').show("slow");
+            $('#animation').queue(function(){
+                $(this).animate({width:'+=400',height:'+=400'},1000).dequeue();
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="animation" style="display: none;"></div>
+</body>
+</html>

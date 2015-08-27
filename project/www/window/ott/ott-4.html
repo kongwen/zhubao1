@@ -1,0 +1,12 @@
+<canvas id="canvasOTTtraffic" width="1024px" height="470px" rel="Out" ></canvas>
+<script>
+clearCanvas(1);	
+ getDataThen(getUrl('ott'), function(data){
+	if($("#canvasOTTtraffic").size()>0){
+      var topTraffic = data["growth"];
+      drawOTTTOP(optionsTop,"canvasOTTtraffic",topTraffic);//绘制主曲线图
+	 }
+	  changeTitle("TOP 10 OTT Services by Growth ");
+	  setTitleOfStartAndEneDate();
+}, 'OTT');
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-text</title>
+</head>
+<body>
+<div id="text" style="display: none;">
+    Text is probably used in most things we build.
+    Larger text masses might be better added through
+    normal HTML,because of accessibility and such.
+    Other texts could be just  part of your app and
+    doesn't necessarily need to be accessible
+    in the same way. For those purposes,oCanvas
+    includes a text display object. It is very easy
+    to use, and works with fonts the way CSS does.
+    If you want a special font, you can include
+    the @font-face declarations in your CSS code,
+    and the font will be available for use in the text
+    objects, just as it would in a normal HTML context.</div>
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#00fe8a"
+    });
+    var txt = canvas.display.text({
+        x:20,
+        y:0,
+        //origin:{x:"left",y:"center"},
+        text:$("#text").html(),
+        font: "bold 15px sans-serif",
+        fill:"#000",
+        align:"left",
+        lineHeight:2,
+       // height:500,
+        baseline:"ideographic"
+    });
+    canvas.addChild(txt);
+    console.log(txt.width,txt.height)
+</script>
+</body>
+</html>

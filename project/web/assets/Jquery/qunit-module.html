@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>qunit-module</title>
+    <link rel="stylesheet" href="js/qunit/qunit-1.18.0.css"/>
+</head>
+<body>
+    <h1 id="qunit-header">QUnit example</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">Test Markup</div>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        ;(function($){
+           module("fun with arrays",{
+              setup:function(){
+                  this.arr = [1,2,3,4,5]
+                  this.control = this.arr.length;
+              },
+               teardown : function(){
+                   equal(this.arr.length,this.control,"Just Checking to see if it's still an Array")
+               }
+           });
+            test("Truthiness is golden",function(){
+                expect(3);
+                var bool = $.isArray(this.arr);
+                ok(bool,"We're expecting an array");
+
+                bool = this.arr.indexOf(5);
+                ok(bool,"We're expect 5 to be in the Array");
+            });
+
+            test("Getting Deep",function(){
+               expect(2);
+               deepEqual(this.arr,[1,2,3,4,5]);
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

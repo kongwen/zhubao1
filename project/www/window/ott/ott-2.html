@@ -1,0 +1,47 @@
+<ul class="OttTabTitle" id="OttTabTitle">
+</ul>
+
+<div class="tabContent">
+<div class="OttVertical">NO. of transactions</div>
+<canvas id="canvasOTT" width="1024px" height="470px" ></canvas>
+</div>
+<script>
+
+ getDataThen(getUrl('ott'), function(data){
+	  getDataConfig('/js/framework/data/setting.json', function (data2) {
+		if($("#canvasOTT").size()>0){
+		var lists =  data2["ott"]["child"];
+		var curList;
+
+		for(var i = 0;i<lists.length;i++){
+			var id = lists[i]["id"];
+			if(id == "app"){
+				curList = i;
+			}
+		}
+
+		var ottConfig = lists[curList]["child"];
+
+		var is = 0;
+		for(var i =0;i<ottConfig.length;i++){
+			var state = ottConfig[i].state;
+			var name = ottConfig[i].name;
+			var rel =  ottConfig[i].id;
+
+			if(state == '1'){
+				if(name == 'WhatsApp'){
+					rel = 'whatsAPP';
+				}
+				$('<li rel="'+rel+'" >'+name+'</li>').appendTo(OttTabTitle);
+			}
+		}
+		}
+		
+		
+		OTTBindChange(data);
+		$("#OttTabTitle>li:eq(0)").tap();
+		changeTitle("OTT Service Throughput Distribution ");
+		setTitleOneDate();
+	  }, 'settings');
+}, 'OTT');
+</script>

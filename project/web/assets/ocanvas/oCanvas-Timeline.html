@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-timeline</title>
+</head>
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc",
+        fps: 60
+    });
+    //数据
+    var data = [0.2222,0.2222,0.2222,0.2222,0.1092];
+    //数据重排
+    data = data.sort().reverse();
+    //当有数值一样时重排
+    var arrHig=[],isDual = 0,odd = 0;
+    var reArrHig = function(centerX,centerY,abs_x,abs_y,lx){
+        var xy = {};
+        xy.x = centerX ;
+        xy.y = centerY;
+        for(var i = 0;i<arrHig.length;i++){
+            if(Math.abs(centerX - arrHig[i].x) <40 && Math.abs(centerY - arrHig[i].y ) < 40 ) {
+                if (isDual % 2 == 0) {
+                    xy.x -=isDual  * abs_x;lx = -lx;
+                    xy.y = arrHig[i].y + odd * abs_y;
+                    isDual ++;
+                }else{
+                    odd ++;
+                    xy.y = arrHig[i].y + odd * abs_y;
+                    isDual ++;
+                }
+                break;
+            }
+        }
+        arrHig.push(xy);
+        return {
+            x:xy.x,
+            y:xy.y,
+            lx:lx
+        };
+    };
+    var c_text = function(x,y,num){
+        var tet1 = canvas.display.text({
+            x:x,
+            y:y,
+            origin: { x: "center", y: "bottom" },
+            font: "bold 20px sans-serif",
+            text: data[num],
+            fill: "#0aa"
+        });
+        canvas.addChild(tet1);
+    }
+    //画线
+    var c_lines = function(start,end,radius,x,y,num){
+        var centerPoint = (end+start)/2;//获取饼图的中间
+        if(centerPoint<0){
+            centerPoint += 360;
+        }
+        var sins = Math.sin(2*Math.PI /360*centerPoint),
+        coss = Math.cos(2*Math.PI /360*centerPoint),
+                centerX,centerY,abs_x,abs_y,lineX;
+        centerX = coss*radius + x;//饼图中间点坐标x
+        centerY = sins*radius + y;//饼图中间点坐标y
+
+        if(centerY > y){
+            abs_y = 30;
+        }else{
+            abs_y = -30;
+        }
+        if(centerX > x){
+            abs_x = 30;
+            lineX = 100;
+        }else{
+            abs_x = -30;
+            lineX = -100;
+        }
+        var abs_cxy = reArrHig(centerX+ abs_x,centerY+ abs_y,abs_x,abs_y,lineX);
+        var line1 = canvas.display.line({
+          start: { x: centerX, y: centerY},
+          end: { x: abs_cxy.x, y: abs_cxy.y},
+          stroke: "1px #0aa"
+        });
+        var line2 = line1.clone({
+            start: { x: abs_cxy.x, y: abs_cxy.y},
+            end: { x:abs_cxy.x + abs_cxy.lx  , y:  abs_cxy.y },
+            stroke: "1px #0aa"
+        });
+        canvas.addChild(line1);
+        canvas.addChild(line2);
+        c_text(abs_cxy.x + abs_cxy.lx/2 ,abs_cxy.y,num);
+
+    }
+
+    //画圆
+    var c_round = canvas.display.arc({
+        x: 250,
+        y: 300,
+        radius:100,
+        stroke: "10px #0aa"
+    });
+    var p_end ,p_start = 0,pieces=[],lastEnd=0;
+    for(var i = 0;i <data.length;i++){
+        p_end = (i > 0 ? lastEnd : 0) + data[i]*360 - (i < 1 ? 90 : 0);
+       p_start = (i < 1 ? -90 : lastEnd);
+        if(p_start>p_end){
+            p_end = p_start;
+        }
+
+        pieces.push(c_round.clone({
+                start:0,
+                end:0
+            }).animate({
+                start:p_start,
+                end:p_end-2
+            },400));
+        console.log(p_start ,p_end );
+
+        lastEnd  =  p_end;
+
+        c_lines(p_start,p_end,c_round.radius,c_round.x,c_round.y,i);
+        canvas.addChild(pieces[i]);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<script src="../js/framework/page.js"></script>
+<script src="../js/framework/setting.js"></script>
+<div class="topHeader">
+    <div id="exitApp" class="exitApp">exit</div>
+    <div class="setting1"></div>
+
+    <script>
+       /* getMessage("Sat", '/js/chart/data/message.json');*/
+    </script>
+
+    <div id="header" data-role="header" data-id="header" data-position="top" data-fullscreen="true"
+         data-tap-toggle="false">
+        <div class="top">
+            <div class="back"></div>
+            <div id="title" class="title"><span>Settings<b></b></span></div>
+        </div>
+    </div>
+    <!-- /header -->
+</div>
+<div class="content" style="height:65.7em;z-index:1100">
+    <div id="settingwap" style="height:65.7em">
+        <div id="settings"></div>
+    </div>
+
+</div>
+
+<script>
+    $.page();
+	$("#messagecon").hide();
+	$("#rightNOteTop").hide().css("z-index",999);
+	$("#rightNOte").hide().css("z-index",999);
+    $.setting({containor:$('#settings')});
+</script>

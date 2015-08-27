@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a href="http://localhost:63342/project/JSG3/dom/dom.html">http://localhost:63342/project/JSG3/dom/dom.html</a>
+<div class="dj" style="margin: 10px auto;width: 100px;">点我出弹窗</div>
+<div id="pop" style="width: 100%;height: 100%;position: absolute;top: 0px;left: 0px;display: none;">
+    <div style="width: 240px;height:300px;position: absolute;top: 35%;left: 40%;border: 1px solid #2365cc;background:#a0b8c4; text-align: center;">
+        <h3 style="margin: 0px">iframe父页面</h3>
+        <div style="padding: 5px;"><iframe src="iframes/neiRong.html" style="width: 230px;height: 200px; border: none;"></iframe></div>
+        <div id="close" style="background: darkorange;">要在另一个页面的js中将我隐藏</div>
+    </div>
+</div>
+<div style="width: 200px;height: 200px;border-radius: 50% 50%  50% 50%;background: #ff0000;"></div>
+<div name="open2"></div>
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script  type="text/javascript">
+ ;(function($){
+    $('.dj').click(function(){
+       // $('#pop').show();
+      //  window.print();
+        window.find();
+    });
+   /*  window.open("neiRong.html",
+             "open2",
+             "height=400,width=400," +
+                     "top=10,left=10,resizable=yes"
+     )*/
+    /* setTimeout(function(){
+         alert(1)
+     },1000);
+     setTimeout(function(){
+         alert(2)
+     },1000);*/
+    /* setTimeout(function(){
+         location.reload();
+        // location.assign("http://localhost:63342/project/temp/neiRong.html");
+     },1000);*/
+        console.log(navigator.userAgent)
+     //alert("screen.height : " +screen.height + ", screen.width : " +screen.width)
+    // alert("screen.availWidth : " +screen.availWidth + ", screen.availHeight : " +screen.availHeight)
+    // alert("window.innerWidth : " +window.innerWidth + ", window.innerHeight : " +window.innerHeight)
+    // alert("document.documentElement.clientWidth : " +document.documentElement.clientWidth + ", document.documentElement.clientHeight : " +document.documentElement.clientHeight)
+ })(jQuery);
+</script>
+</body>
+</html>

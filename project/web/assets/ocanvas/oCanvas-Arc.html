@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>oCanvas-line</title>
+</head>
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+<script type="text/javascript" src="ocanvas.min.js"></script>
+<script  type="text/javascript">
+    var canvas = oCanvas.create({
+        canvas: "#canvas",
+        background: "#ccc"
+    });
+    var arc = canvas.display.arc({
+        x:100,
+        y:100,
+        radius:50,
+        start:0,
+        end:90,
+        stroke: "20px #0aa",
+        pieSection:false,
+        direction:"anticlockwise"
+    });
+    canvas.addChild(arc);
+    var data = [0.2,0.2,0.2,0.3,0.1];
+    var a_end = 0,a_st = 0;
+    /*for(var i = 0;i < data.length;i++){
+        a_end +=data[i]*360;
+        var c_arc = arc.clone({
+            start:0,
+            end:0
+        }).animate({
+            start:a_st,
+            end:a_end-2
+        });
+        a_st = a_end;
+        canvas.addChild(c_arc);
+    }*/
+    var rect = canvas.display.rectangle({
+        x:100,
+        y:250,
+        width:100,
+        height:100,
+        stroke:"20px #0aa",
+        strokePosition:"outside"
+    });
+    canvas.addChild(rect);
+</script>
+</body>
+</html>

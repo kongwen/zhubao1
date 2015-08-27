@@ -1,0 +1,25 @@
+<ul class="impactNote2">
+			<li><span class="min"></span> < Baseline</li>
+			<li><span class="max"></span> > Baseline</li>
+			<li><span></span> Baseline</li>
+		   </ul>
+		   <div class="impactCon">
+			<h1>No.of  Impacted  Users (VIPs)</h1>
+			<canvas  id="canvasUserImpactLeft" width="490px" height="460px"   ></canvas>
+		   </div>
+		   
+		   <div class="impactCon">
+			<h1>No.of Impacted  Users (VIPs)</h1>
+			<canvas  id="canvasUserImpactRight" width="490px" height="460px"   ></canvas>
+			</div>
+			
+            <script src="../js/chart/canvas.UserImpact.js"></script>
+<script>
+		changeTitle("Service Performance");
+		getDataThen(getUrl('impact'), function(data){
+			if($("#canvasUserImpactLeft").size()>0){
+				drawUserImpact(options,"canvasUserImpact",data);
+			}
+	   }, 'Impact');
+   
+</script>

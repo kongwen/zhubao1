@@ -1,0 +1,48 @@
+	 <div class="deviceLeft">
+				<h1 class="deviceTitle">Device Types</h1>
+				<canvas  id="canvasDevice" width="1024px" height="570"  rel="allUser" ></canvas>
+			 </div>
+			 
+			 <div class="floatl">
+			 <div class="deviceList">
+				<h1 class="deviceTitle">Most Complaints</h1>
+				<div  id="Complaints" class="deviceContent">
+				
+				</div>
+			 </div>
+			 
+			  <div class="deviceList  clearRight">
+				<h1 class="deviceTitle">Most Popular</h1>
+				<div  id="poplur" class="deviceContent">
+				
+				</div>
+			 </div>
+			 </div>
+			 
+			 
+			 <div class="floatl" >
+			  <div class="deviceList">
+				<h1 class="deviceTitle">Fastest Growing</h1>
+				<div id="Fastest" class="deviceContent">
+				
+				</div>
+			 </div>
+			 
+			  <div class="deviceList">
+				<h1 class="deviceTitle">LTE</h1>
+				<div id="LTE" class="deviceContent">
+				
+				</div>
+			 </div>
+             </div>
+		
+            <script src="../js/chart/canvas.Device.js"></script>
+
+		<script>
+		
+            getDataThen(getUrl('devices'), function(data){
+			if($("#canvasDevice").size()>0){
+				drawDevice(options,"canvasDevice",data);
+				}
+            }, 'Device');
+        </script>
